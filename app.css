@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
+
+
 :root{
     /*Force le box-sizing a tout tout tout le monde*/
     box-sizing: border-box;
@@ -6,12 +10,21 @@
 *,*::before,*::after{
     /*Force le box-sizing a tout tout tout le monde*/
     box-sizing: inherit;
+
+    /*Font par default de la page*/
+    font-family: 'Josefin Sans', cursive;
+    font-weight:lighter;
+    text-shadow: 1px 1px black;
+
+    /*Augmente l'espace entre les lignes pour rendre le texte plus lisible avec le glow*/
+    line-height: 2;
 }
 
-
+body{
+    background-color: aquamarine;
+}
 
 main{
-
     background-color: rgb(235, 136, 226);
 }
 
@@ -55,7 +68,7 @@ div{
 }
 
 div:nth-child(2){
-    background-color: rgb(6, 161, 6);
+    background-color: rgb(127, 161, 6);
 }
 
 div:nth-child(3){
