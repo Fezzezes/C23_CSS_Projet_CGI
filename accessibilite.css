@@ -6,6 +6,10 @@
     body{
         border: red dotted 8px;
     }
+    .presentation_centrales div img{
+
+        content: none;
+    }
  
 }
 /*Tablette*/
