@@ -1,10 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
+/*chalk font*/
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
 
 
 :root{
     /*Force le box-sizing a tout tout tout le monde*/
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 *,*::before,*::after{
@@ -12,7 +14,7 @@
     box-sizing: inherit;
 
     /*Font par default de la page*/
-    font-family: 'Josefin Sans', cursive;
+    font-family: 'Fredericka the Great', cursive;
     font-weight:lighter;
     text-shadow: 1px 1px black;
 
@@ -23,7 +25,7 @@
 body{
 
     background-color: aquamarine;
-    margin: 0px;
+    
 }
 
 main{
@@ -54,7 +56,8 @@ section{
 }
 
 section:nth-child(2){
-    background-color: rgb(61, 61, 184)
+    background-color: rgb(61, 61, 184);
+    background-image: url("./Textures/ep_naturalwhite.png");
 }
 
 section:nth-child(3){
