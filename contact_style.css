@@ -1,0 +1,73 @@
+
+
+h2{
+
+    color: rgb(245, 255, 105);
+}
+
+.formulaire_contact{
+
+    background-color: cadetblue;
+    width: 85vw;
+    height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+
+
+    border: solid red 4px;
+}
+
+.formulaire_contact h2
+{
+    color: rgb(29, 108, 177);
+    text-align: center;
+
+    border: black solid;
+    grid-row-start: 1;
+
+}
+
+.formulaire_contact div{
+    display: flex;
+    flex-direction: column;
+}
+
+.fomulaire_envoyer div label{
+    color: red;
+    width: 25px;
+}
+
+.formulaire_nom{
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.formulaire_prenom{
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.formulaire_courriel{
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.formulaire_telephone{
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.formulaire_commentaire{
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+.fomulaire_envoyer{
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+
+
+
+

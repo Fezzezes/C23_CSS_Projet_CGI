@@ -1,0 +1,96 @@
+:root{
+    /*Force le box-sizing a tout tout tout le monde*/
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    /*Force le box-sizing a tout tout tout le monde*/
+    box-sizing: inherit;
+}
+
+
+
+main{
+
+    background-color: rgb(235, 136, 226);
+}
+
+header{
+    background-color: chocolate;
+    
+}
+
+.banniere{
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+nav{
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section{
+    background-color: rgb(130, 130, 230)
+}
+
+section:nth-child(2){
+    background-color: rgb(61, 61, 184)
+}
+
+section:nth-child(3){
+    background-color: rgb(1, 1, 153)
+}
+
+section:nth-child(4){
+    background-color: rgb(0, 0, 66)
+}
+
+div{
+    background-color: rgb(17, 196, 17);
+}
+
+div:nth-child(2){
+    background-color: rgb(6, 161, 6);
+}
+
+div:nth-child(3){
+    background-color: rgb(5, 105, 5);
+}
+
+div:nth-child(4){
+    background-color: rgb(5, 94, 5);
+}
+div:nth-child(5){
+    background-color: rgb(38, 77, 38);
+}
+div:nth-child(6){
+    background-color: rgb(7, 51, 7);
+}
+div:nth-child(7){
+    background-color: rgb(1, 31, 1);
+}
+
+ul 
+{
+    background-color: rgb(168, 73, 73);
+}
+
+li{
+    background-color: brown;
+}
+
+footer{
+    background-color: blueviolet;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
