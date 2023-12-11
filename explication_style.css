@@ -5,20 +5,114 @@ h2{
 
 .section_actualite{
 
-    width: 300vw;
+    /* width: 300vw; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    /* display: grid;
+    grid-template-columns: auto 40% auto;
+    grid-row: 100% 100%;
+    gap: 3%;
+    padding-left: 1%;
+    padding-right: 1%; */
 }
+
+
 
 .section_actualite > h2{
 
     width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+    text-align: center;
   
 }
 
-.section_actualite div{
 
-    width: 90vw;
+
+.nouvelle{
+    height: 1200px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-row: 5% auto 25%;
+
+    background-color: aqua;
+    width: 30%;
+
+    
 }
+
+
+
+.nouvelle h3 {
+    width: 100%;
+    text-align: center;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 0;
+}
+
+.nouvelle{
+
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.image_presentation
+{
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+    align-self: center;
+
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.selectionner-nouvelle
+{
+    /*cahcher le bouton*/
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 100;
+}
+
+/* .selectionner-nouvelle + .nouvelle
+{
+    cursor: pointer;
+}
+
+.selectionner-nouvelle:checked + .nouvelle
+{
+    outline: 10px solid slateblue;
+    width: 100%;
+    order: -5;
+} */
+
+.nouvelle p {
+    color: aliceblue;
+    text-overflow: ellipsis;
+    padding: 10px;
+
+    overflow: scroll;
+
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+

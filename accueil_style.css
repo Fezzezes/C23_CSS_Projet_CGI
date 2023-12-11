@@ -138,17 +138,8 @@ h2{
 .presentation h3
 {
     position: relative;
-
     width: 100%;
-    
     margin: 0px;
-    /* 
-    bottom: 0px;
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    white-space: nowrap;
-    width: 100%; */
 }
 
 .presentation_contenu {
@@ -200,8 +191,8 @@ h2{
 
   .ouvrir-dossier:not(:checked) + h3 + .presentation_contenu {
     
-    height: 400px;
-    margin-bottom: -400px;
+    height: 700px;
+    margin-bottom: -700px;
   }
 
 /* .presentation h3:not(:nth-last-child(2))::after {
