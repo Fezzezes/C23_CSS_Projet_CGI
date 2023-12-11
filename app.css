@@ -52,6 +52,8 @@ nav{
 
     position: sticky;
     top: 0;
+    /*Place la barre de nav par-dessus tout*/
+    z-index: 100;
 }
 
 section{
