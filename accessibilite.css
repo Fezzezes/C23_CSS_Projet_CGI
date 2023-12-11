@@ -7,7 +7,7 @@
         border: red dotted 8px;
        
     }
-
+/* 
     .presentation_centrales div h3{
         content-visibility: visible;
     }
@@ -21,7 +21,7 @@
     .presentation_centrales div p{
         width: 100%;
         margin-top: 5px;
-    }
+    } */
 }
 /*Tablette*/
 @media screen and (min-width: 768px)and (max-width:1200px){

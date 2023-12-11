@@ -11,7 +11,7 @@ h2{
     color: rgb(30, 255, 0);
 }
 
-.presentation_centrales
+/* .presentation_centrales
 {
     display: flex;
     flex-direction: column;
@@ -19,9 +19,9 @@ h2{
     gap: 15px;
 
     
-}
+} */
 
-.presentation_centrales div{
+/* .presentation_centrales div{
 
     background-image: url("./Textures/cork-board.png");
   
@@ -36,9 +36,9 @@ h2{
     overflow: hidden;
 
     border-radius: 55px;
-}
+} */
 
-.presentation_centrales div h3{
+/* .presentation_centrales div h3{
 
     background-color: bisque;
     content-visibility: hidden;
@@ -50,25 +50,19 @@ h2{
 
     justify-content: left;
     
-}
+} */
 
-.presentation_centrales div:nth-child(2n-1) h3{
+/* .presentation_centrales div:nth-child(2n-1) h3{
 
     background-color: rgb(126, 96, 60);
 
     justify-content: right;
     text-align: right;
 
-}
-
+} */
+/* 
 .presentation_centrales div p{
     
-
-   
-    /* grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2; */
-
     width: 75%;
     height: auto;
     
@@ -80,20 +74,20 @@ h2{
 
     border-radius: 50px 0px 0px 50px;
 }
+ */
 
-.presentation_centrales div:nth-child(2n) p{
+/* .presentation_centrales div:nth-child(2n) p{
     
     border-radius: 0px 50px 50px 0px;
-}
+} */
 
 
-.presentation_centrales div img{
+/* .presentation_centrales div img{
 
     width: 25%;
     height: auto;
     
     border-radius: 25px;
-    /* border: solid grey 20px; */
 
     box-shadow: black 10px 10px 25px;
     
@@ -101,11 +95,132 @@ h2{
     align-self: center;
     
     
-}
+} */
 
 
 .presentation_centrales div:nth-child(2n) img{
 
     order: 1;
 }
+
+
+/*Style dossier --------------------------------------------------------------------*/
+.presentation{
+
+    box-sizing: border-box;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+.presentation .ouvrir-dossier {
+
+    cursor:pointer;
+    margin: 0;
+    opacity: 00;
+    /*Place le cursor par-dessus le texte*/
+    z-index: 1;
+
+    width: 100%;
+    height: 65px;
+
+    /*Place le bouton sur le titre*/
+    margin-bottom: -65px;
+    margin-right: 0;
+} 
+
+.presentation h3
+{
+    position: relative;
+
+    width: 100%;
+    height: 30px;
+
+    /* 
+    bottom: 0px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%; */
+}
+
+.presentation_contenu {
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    /* overflow: auto; */
+
+    position: relative;
+    
+
+    background-color: #f7f7f7;
+    color: #7f8787;
+    height: 600px;
+    margin-bottom: -600px;
+    margin-right: 0;
+    padding: 30px;
+    width: 100%;
+
+
+
+    transition: margin 0.3s ease 0.1s;
+
+  }
+
+  .presentation_contenu img{
+    width: 25%;
+    height: auto;
+    
+    border-radius: 25px;
+
+    box-shadow: black 10px 10px 25px;
+    
+    order: 10;
+    align-self: center;
+  }
+
+  
+  /* .presentation_centrales .presentation:nth-child(2n) .presentation_contenu img{
+
+    order: 1;
+} */
+
+  .presentation_contenu p{
+
+  }
+
+  .ouvrir-dossier:checked + h3 + .presentation_contenu {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+/* .presentation h3:not(:nth-last-child(2))::after {
+    border: 1px solid transparent;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+} */
+
+
+.ouvrir-dossier:hover + h3, .ouvrir-dossier:checked + h3 {
+    background-color: #ffffff;
+} 
+
+   
+  
+
+
+
 
