@@ -24,6 +24,15 @@
         min-width: 400px;
         margin-top: 5px;
     }
+
+    .main_contact{
+        flex-direction: column;
+    }
+
+    .main_contact::before{
+        content: '';
+        height: 100px;
+    }
 }
 /*Tablette*/
 @media screen and (min-width: 768px)and (max-width:1200px){
