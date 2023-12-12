@@ -8,15 +8,20 @@
        
     }
 
-
+    .presentation_contenu{
+        display: grid;
+        grid-template-columns: auto 200px;
+        grid-template-rows: 200px;
+    }
     .presentation_contenu img{
-        content-visibility: hidden;
+        /* content-visibility: hidden; */
         margin: auto;
         padding: 0;
     }
     
     .presentation_contenu div p{
         width: 100%;
+        min-width: 400px;
         margin-top: 5px;
     }
 }

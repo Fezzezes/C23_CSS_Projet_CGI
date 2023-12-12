@@ -135,23 +135,19 @@ h2{
     margin-right: 0;
 } 
 
-.presentation h3
-{
-    position: relative;
-    width: 100%;
-    margin: 0px;
-}
-
 .presentation_contenu {
 
     box-sizing: border-box;
-
+/* 
     display: flex;
-    flex-direction: row;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: auto 400px;
+    grid-template-rows: 400px;
+    gap: 10px;
     /* overflow: auto; */
 
     position: relative;
-    
 
     background-color: #f7f7f7;
     color: #7f8787;
@@ -162,15 +158,23 @@ h2{
     padding: 30px;
     width: 100%;
 
-    gap: 15px;
-
-    transition: margin 0.3s ease 0.1s;
-    
+    transition: margin 0.3s ease 0.1s;    
   }
 
+  .presentation h3
+{
+    position: relative;
+    width: 100%;
+    margin: 0px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+}
+
   .presentation_contenu img{
-    width: 25%;
-    /* height: auto; */
+    width: 100%;
+    height: auto;
     
     border-radius: 25px;
 
@@ -178,6 +182,10 @@ h2{
     
     order: 10;
     align-self: center;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
   }
 
   .presentation_contenu p{
@@ -186,7 +194,13 @@ h2{
     border: #f7f7f7;
     border-radius: 15px;
     
-    
+    margin: 0;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+
+    overflow: auto;
   }
 
   .ouvrir-dossier:not(:checked) + h3 + .presentation_contenu {
