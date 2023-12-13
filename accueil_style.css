@@ -8,124 +8,75 @@
 
 h2{
 
-    color: rgb(30, 255, 0);
+    color: #000000;
+    
 }
 
-/* .presentation_centrales
+
+.a_propos
 {
-    display: flex;
+    /* background-image: url("./Textures/triangular_teal.png"); */
+    background-image: url(./Textures/aqua_naturel.png);
+   
+}
+
+.a_propos p{
+
+    padding-bottom: 100px;
+}
+
+article{
+
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: auto 50px 10%;
+    grid-template-rows: 65px auto;
+
+    /* display: flex;
     flex-direction: column;
-    align-self: center;
-    gap: 15px;
-
-    
-} */
-
-/* .presentation_centrales div{
-
-    background-image: url("./Textures/cork-board.png");
-  
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-
-
-    overflow: hidden;
-
-    border-radius: 55px;
-} */
-
-/* .presentation_centrales div h3{
-
-    background-color: bisque;
-    content-visibility: hidden;
-
-    width: 100%;
-    margin: 0px;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    justify-content: left;
-    
-} */
-
-/* .presentation_centrales div:nth-child(2n-1) h3{
-
-    background-color: rgb(126, 96, 60);
-
-    justify-content: right;
-    text-align: right;
-
-} */
-/* 
-.presentation_centrales div p{
-    
-    width: 75%;
-    height: auto;
-    
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    padding: 25px;
-    order: 5;
-
-    border-radius: 50px 0px 0px 50px;
+    overflow: hidden; */
 }
- */
 
-/* .presentation_centrales div:nth-child(2n) p{
+label{
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1 ;
+    grid-row-end: 2;
+
+    /* background-color: #00bf995e; */
+    background-image: url(./Textures/prism.png);
     
-    border-radius: 0px 50px 50px 0px;
-} */
+
+    display: grid;
+    grid-template-columns: auto 50px 10%;
+    grid-template-rows: 65px auto;
+    gap: 10px;
 
 
-/* .presentation_centrales div img{
-
-    width: 25%;
-    height: auto;
-    
-    border-radius: 25px;
-
-    box-shadow: black 10px 10px 25px;
-    
-    order: 10;
-    align-self: center;
-    
-    
-} */
+    /*place le label par-dessus le boxshadow de .presentation_contenu*/
+    z-index: 10;
+    /* border-bottom: rgb(3, 39, 51) solid 4px; */
 
 
-.presentation_centrales div:nth-child(2n) img{
-
-    order: 1;
 }
 
 
-/*Style dossier --------------------------------------------------------------------*/
-.presentation{
+input{
 
-    box-sizing: border-box;
-
-    width: 100%;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
-    box-sizing: border-box;
-}
-
-.presentation .ouvrir-dossier {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1 ;
+    grid-row-end: 2;
 
     cursor:pointer;
     margin: 0;
-    opacity: 00;
+    opacity: 0;
+
     /*Place le cursor par-dessus le texte*/
-    z-index: 1;
+    z-index: 100;
 
     width: 100%;
     height: 65px;
@@ -135,42 +86,96 @@ h2{
     margin-right: 0;
 } 
 
+label h3
+{
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 100%;
+    margin: 0;
+    margin-left: 10px;
+
+    
+    color: whitesmoke;
+}
+
+label h3:after {
+    /*fleche gauche*/
+
+    width: 100px;
+	content: "\25BC";
+    color: gray;
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    
+}
+
+img{
+
+    border-radius: 15px;
+    border: solid rgba(128, 128, 128, 0.308);
+    box-shadow: 2px 2px 2px;
+}
+
+label > img{
+    /*utile seulement pour petit écran*/
+    display: block;
+    grid-column-start: 2 ;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 50px;
+    height: auto;
+    align-self: center;
+
+
+    /* display: none; */
+  }
+
+
+
 .presentation_contenu {
 
-    box-sizing: border-box;
-/* 
-    display: flex;
-    flex-direction: row; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+
     display: grid;
-    grid-template-columns: auto 400px;
+    grid-template-columns: minmax(500px, auto) 400px;
     grid-template-rows: 400px;
     gap: 10px;
-    /* overflow: auto; */
+
+
 
     position: relative;
 
-    background-color: #f7f7f7;
-    color: #7f8787;
+  
+    background-image: url(./Textures/aqua_naturel.png);
+    color: #000000;
 
     margin-bottom: 0;
     margin-right: 0;
 
-    padding: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
     width: 100%;
 
-    transition: margin 0.3s ease 0.1s;    
+    /* transition: margin 2s ease 0.1s;     */
   }
 
-  .presentation h3
-{
-    position: relative;
-    width: 100%;
-    margin: 0px;
 
-    grid-column-start: 1;
-    grid-column-end: 3;
-    
-}
 
   .presentation_contenu img{
     width: 100%;
@@ -185,29 +190,69 @@ h2{
 
     grid-column-start: 2;
     grid-column-end: 3;
-
   }
 
   .presentation_contenu p{
 
-    background-color: #7f8787;
-    border: #f7f7f7;
+    /* background-color: #FFFFFF; */
+    /* background-image: url("./Textures/triangular_teal.png"); */
+    /* border: #00BF9A solid 5px; */
     border-radius: 15px;
     
     margin: 0;
 
     grid-column-start: 1;
     grid-column-end: 2;
-
-
     overflow: auto;
   }
 
-  .ouvrir-dossier:not(:checked) + h3 + .presentation_contenu {
+  .a_propos::after,
+  .presentation_contenu::after{
+    content: '';
+    width: 100%;
+    height: 0;
+
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    /* border: red solid; */
+    box-shadow: 0px 10px 80px 10px #000000;
+
+    z-index: 1;
+  }
+
+  article:last-child .presentation_contenu::after{
+    box-shadow: none;
+    padding-bottom: 20px;
+  }
+
+  /* .ouvrir-dossier:not(:checked) + h3 + .presentation_contenu {
     
+    background-color: chocolate;
     height: 700px;
     margin-bottom: -700px;
+  } */
+
+  input:not(:checked) + label +.presentation_contenu{
+    
+    background-color: chocolate;
+    height: 100px;
+    margin-bottom: -100px;
+    /* z-index: -100; */
+    display: none;
   }
+
+  input:checked + label h3:after {
+    /*fleche gauche*/
+
+	content: "  \1405";
+    color: rgb(68, 68, 68);
+}
+
+
+
+  
 
 /* .presentation h3:not(:nth-last-child(2))::after {
     border: 1px solid transparent;

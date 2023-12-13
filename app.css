@@ -3,24 +3,18 @@
 /*chalk font*/
 @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Raleway:wght@600&family=Roboto+Mono:wght@100;500&display=swap');
 
-:root{
-    /*Force le box-sizing a tout tout tout le monde*/
-    /* box-sizing: border-box; */
-}
-
-.boxsizingBorder {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
 
 *,*::before,*::after{
     /*Force le box-sizing a tout tout tout le monde*/
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
 
     /*Font par default de la page*/
-    font-family: 'Fredericka the Great', cursive;
+    /* font-family: 'Fredericka the Great', cursive; */
+    font-family: 'Raleway', cursive;
     font-weight:lighter;
     text-shadow: 1px 1px black;
 
@@ -30,7 +24,9 @@
 
 body{
 
-    background-color: aquamarine;
+    background-image: url(./Textures/vintage-concrete.png);
+    background-image: url("./Textures/ep_naturalwhite.png");
+    margin: 0;
     /* display: grid;
     grid-template-rows: 35%; */
    
@@ -39,7 +35,21 @@ body{
 
 
 main{
-    background-color: rgb(235, 136, 226);
+    background-image: url(./Textures/vintage-concrete.png);
+    background-image: url("./Textures/ep_naturalwhite.png");
+    
+}
+
+
+p, h2, h3{
+    margin: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+a{
+    color: #00BF9A;
 }
 
 header{
@@ -64,25 +74,44 @@ header{
     text-shadow: 2px 2px black;
     margin: 0;
 
-    z-index: -1;
- 
-    
+    z-index: -1;   
 }
 
 nav{
-    background-color: yellow;
+    background-image: url(./Textures/prism.png);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 
     position: sticky;
+
     top: 0;
     /*Place la barre de nav par-dessus tout*/
     z-index: 100;
+    padding: 10px;
 }
 
-section{
+nav a{
+    padding-left: 10px;
+    padding-right: 10px;
+    align-self: center;
+}
+
+nav a:hover{
+    background-color: brown;
+    color: yellow;
+}
+
+nav a.nav_active{
+    border:#00BF9A solid;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+
+/* section{
     background-color: rgb(130, 130, 230)
 }
 
@@ -94,7 +123,7 @@ section:first-child()
 
 section:nth-child(2){
     background-color: rgb(61, 61, 184);
-    background-image: url("./Textures/ep_naturalwhite.png");
+    
 }
 
 section:nth-child(3){
@@ -110,14 +139,14 @@ div{
 }
 
 div:nth-child(2){
-    background-color: rgb(127, 161, 6);
-}
+    background-color: rgb(127, 161, 6); */
+/* } */
 
-div:nth-child(3){
+/* div:nth-child(3){
     background-color: rgb(5, 105, 5);
-}
+} */
 
-div:nth-child(4){
+/* div:nth-child(4){
     background-color: rgb(5, 94, 5);
 }
 div:nth-child(5){
@@ -128,7 +157,7 @@ div:nth-child(6){
 }
 div:nth-child(7){
     background-color: rgb(1, 31, 1);
-}
+} */
 
 ul 
 {
@@ -136,7 +165,7 @@ ul
 }
 
 li{
-    background-color: brown;
+   color:whitesmoke;
 }
 
 footer::before
@@ -144,19 +173,29 @@ footer::before
     height: 100px;
     content: '';
     display: block;
+
+
+    border-radius: 0px 0px 40px 40px;
+    background-image: url(./Textures/aqua_naturel.png);
 }
 
 footer{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    
+    background-image: url(./Textures/prism.png);
     margin: 0;
     padding: 0;
 
     width: 100%;
     position:absolute;
+
     left: 0;
 }
 
 footer ul{
+
+    background-image: url(./Textures/prism.png);
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -164,4 +203,7 @@ footer ul{
     margin: 0;
 
     align-self: flex-end;
+
+    border-radius: -40px 0px 0px 0px;
+
 }
