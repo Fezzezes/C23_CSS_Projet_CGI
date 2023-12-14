@@ -11,6 +11,7 @@
 
 /*Téléphone mobile*/
 @media screen and (max-width:768px) {
+
     body{
         /* border: red dotted 8px; */
         font-size: 1rem;

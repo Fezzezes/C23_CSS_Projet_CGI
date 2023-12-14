@@ -6,12 +6,14 @@
 
 
 
-h2{
 
-    color: #000000;
-    
+.a_propos::before{
+    content: '';
+
+    display: block;
+    height: 2rem;
+    width: 100%;
 }
-
 
 .a_propos
 {
@@ -142,7 +144,7 @@ label > img{
 
 
     /* display: none; */
-  }
+}
 
 
 
@@ -165,6 +167,7 @@ label > img{
 
   
     background-image: url(./Textures/aqua_naturel.png);
+    background-image: url(./Textures/triangular.png);
     color: #000000;
 
     margin-bottom: 0;
@@ -177,11 +180,11 @@ label > img{
     width: 100%;
 
     /* transition: margin 2s ease 0.1s;     */
-  }
+}
 
 
 
-  .presentation_contenu img{
+.presentation_contenu img{
     width: 100%;
     height: auto;
     
@@ -195,9 +198,9 @@ label > img{
     grid-column-start: 2;
     grid-column-end: 3;
     
-  }
+}
 
-  .presentation_contenu p{
+.presentation_contenu p{
 
     /* background-color: #FFFFFF; */
     /* background-image: url("./Textures/triangular_teal.png"); */
@@ -211,10 +214,10 @@ label > img{
     grid-row-start: 1;
     grid-row-end: 3;
     overflow: visible;
-  }
+}
 
-  .a_propos::after,
-  .presentation_contenu::after{
+.a_propos::after,
+.presentation_contenu::after{
     content: '';
     width: 100%;
     height: 0;
@@ -227,30 +230,42 @@ label > img{
     box-shadow: 0px 10px 80px 10px #000000;
 
     z-index: 1;
-  }
+}
 
-  article:last-child .presentation_contenu::after{
+article:last-child .presentation_contenu::after{
+
     box-shadow: none;
     padding-bottom: 20px;
-  }
+}
 
-  /* .ouvrir-dossier:not(:checked) + h3 + .presentation_contenu {
-    
-    background-color: chocolate;
-    height: 700px;
-    margin-bottom: -700px;
-  } */
+article:last-child::after{
 
-  input:not(:checked) + label +.presentation_contenu{
+    content: '';
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 100%;
+    height: 30px;
+
+    background-image: url(./Textures/prism.png);
+    border-top: rgba(128, 128, 128, 0.13) solid 4px;
+    box-shadow: 0px 5px 10px 2px;
+
+    z-index: 10; 
+}
+
+
+
+
+input:not(:checked) + label +.presentation_contenu{
     
     background-color: chocolate;
     height: 100px;
     margin-bottom: -100px;
     /* z-index: -100; */
     display: none;
-  }
+}
 
-  input:checked + label h3:after {
+input:checked + label h3:after {
     /*fleche gauche*/
 
 	content: "  \1405";

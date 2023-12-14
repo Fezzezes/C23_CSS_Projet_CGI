@@ -41,12 +41,40 @@ main{
 }
 
 
-p, h2, h3{
-    margin: 0;
+h2{
+    /* color: hotpink; */
+
+    color: aliceblue;
+    background-image: url("./Textures/triangular_teal.png");
+
+    width:fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border: #444 solid;
+    border-right: transparent;
+    border-top: transparent;
+    border-radius: 4px;
+
+    box-shadow: 0px 2px 20px 0px black;
+
+}
+
+p{
     margin-right: 10px;
     margin-left: 20px;
     padding-left: 10px;
+    padding: 20px;
+}
+p, h2, h3{
 
+    margin: 0;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+h2, h3{
+    color: whitesmoke;
 }
 
 a{
@@ -118,54 +146,6 @@ nav a.nav_active{
 }
 
 
-/* section{
-    background-color: rgb(130, 130, 230)
-}
-
-
-section:first-child()
-{
-    background-color: rgb(170, 20, 20)
-}
-
-section:nth-child(2){
-    background-color: rgb(61, 61, 184);
-    
-}
-
-section:nth-child(3){
-    background-color: rgb(1, 1, 153)
-}
-
-section:nth-child(4){
-    background-color: rgb(0, 0, 66)
-}
-
-div{
-    background-color: rgb(17, 196, 17);
-}
-
-div:nth-child(2){
-    background-color: rgb(127, 161, 6); */
-/* } */
-
-/* div:nth-child(3){
-    background-color: rgb(5, 105, 5);
-} */
-
-/* div:nth-child(4){
-    background-color: rgb(5, 94, 5);
-}
-div:nth-child(5){
-    background-color: rgb(38, 77, 38);
-}
-div:nth-child(6){
-    background-color: rgb(7, 51, 7);
-}
-div:nth-child(7){
-    background-color: rgb(1, 31, 1);
-} */
-
 ul 
 {
     background-color: rgb(168, 73, 73);
@@ -184,6 +164,8 @@ footer::before
 
     border-radius: 0px 0px 40px 40px;
     background-image: url(./Textures/aqua_naturel.png);
+
+    
 }
 
 footer{
