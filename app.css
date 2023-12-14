@@ -25,7 +25,7 @@
 body{
 
     background-image: url(./Textures/vintage-concrete.png);
-    background-image: url("./Textures/ep_naturalwhite.png");
+    background-image: url("./Textures/aqua_naturel.png");
     margin: 0;
     /* display: grid;
     grid-template-rows: 35%; */
@@ -36,7 +36,7 @@ body{
 
 main{
     background-image: url(./Textures/vintage-concrete.png);
-    background-image: url("./Textures/ep_naturalwhite.png");
+    background-image: url("./Textures/aqua_naturel.png");
     
 }
 
@@ -44,7 +44,8 @@ main{
 p, h2, h3{
     margin: 0;
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
 
 }
 
@@ -91,7 +92,13 @@ nav{
     /*Place la barre de nav par-dessus tout*/
     z-index: 100;
     padding: 10px;
+
+    border-top: rgba(128, 128, 128, 0.13) solid 4px;
+    box-shadow: 0px 5px 10px 2px;
+    border-radius: 2px;
+
 }
+
 
 nav a{
     padding-left: 10px;

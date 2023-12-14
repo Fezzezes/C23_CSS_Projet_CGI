@@ -1,8 +1,24 @@
 
 h2{
-    color: hotpink;
+    /* color: hotpink; */
+    
+    border-radius: 4px;
 }
 
+main{
+
+    display: flex;
+    flex-direction: column;
+}
+section:first-child::before{
+    content: '';
+
+    display: block;
+    height: 2rem;
+    width: 100%;
+
+    
+}
 
 form {
     /*empeche les nouvelles de wrapper en colonne*/
@@ -29,6 +45,16 @@ label {
     transition: transform 400ms ease-out;
 }
 
+.section_actualite{
+    background-color: #444;
+    padding-bottom: 25px;
+
+    background-image: url("./Textures/prism.png");
+    border-radius: 20px 20px 0px 0px;
+    border-top: rgba(128, 128, 128, 0.13) solid 4px;
+    box-shadow: 0px 5px 80px 10px black;
+}
+
 .nouvelle{
 
     display: grid;
@@ -41,15 +67,30 @@ label {
     padding: 0;
     gap:10px;
 
-    /* background-image: url("./Images/protest.jpg"); */
-    border: green solid;
+    background-image: url(./Textures/triangular.png);
+    border: rgba(128, 128, 128, 0.582) solid 5px;
+ 
+    border-top: none;
+    border-right: none;
     border-radius: 25px;
+
+    
 }
 
 .nouvelle h3{
     margin: 0;
     grid-column-start: 2;
     grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    overflow: hidden;
+
+    /* background-image: url("./Textures/prism.png");
+    border-radius: 20px 20px 0px 0px;
+    border-top: rgba(128, 128, 128, 0.13) solid 4px;
+    box-shadow: 0px 5px 10px 2px black; */
 }
 
 .nouvelle img {
