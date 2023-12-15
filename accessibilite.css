@@ -57,9 +57,14 @@
         flex-direction: column;
     }
 
-    .main_contact::before{
-        content: '';
-        height: 100px;
+    .contact{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .div_contact p{
+        font-size: 1.2em;
     }
 }
 /*Tablette*/
@@ -73,6 +78,27 @@
         display: grid;
         grid-template-columns: auto 200px;
         grid-template-rows: 200px;
+    }
+
+    .contact article:nth-child(3) {
+    
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .contact article:nth-child(4) {
+        
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .div_contact p{
+        font-size: 1.2em;
     }
 
 }

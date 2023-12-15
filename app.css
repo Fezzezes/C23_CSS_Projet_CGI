@@ -37,7 +37,8 @@ body{
 main{
     background-image: url(./Textures/vintage-concrete.png);
     background-image: url("./Textures/aqua_naturel.png");
-    
+    padding-top: 50px;
+     
 }
 
 
@@ -66,6 +67,7 @@ p{
     padding-left: 10px;
     padding: 20px;
 }
+
 p, h2, h3{
 
     margin: 0;
@@ -80,6 +82,19 @@ h2, h3{
 a{
     color: #00BF9A;
 }
+
+a:link,
+a:visited{
+text-decoration: none;
+}
+
+a:hover{
+    background-color: #00BF9A;
+    color: black;
+    border-radius: 5px;
+}
+
+
 
 header{
     width: 100%;
@@ -134,10 +149,7 @@ nav a{
     align-self: center;
 }
 
-nav a:hover{
-    background-color: brown;
-    color: yellow;
-}
+
 
 nav a.nav_active{
     border:#00BF9A solid;
@@ -149,6 +161,7 @@ nav a.nav_active{
 ul 
 {
     background-color: rgb(168, 73, 73);
+    list-style: none;
 }
 
 li{

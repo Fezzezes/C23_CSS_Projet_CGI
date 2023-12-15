@@ -7,13 +7,7 @@
 
 
 
-.a_propos::before{
-    content: '';
 
-    display: block;
-    height: 2rem;
-    width: 100%;
-}
 
 .a_propos
 {
