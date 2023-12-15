@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
 /*chalk font*/
 @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
-
+/*raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Raleway:wght@600&family=Roboto+Mono:wght@100;500&display=swap');
+
+/*poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,900;1,600;1,900&display=swap');
 
 
 *,*::before,*::after{
@@ -14,12 +17,7 @@
 
     /*Font par default de la page*/
     /* font-family: 'Fredericka the Great', cursive; */
-    font-family: 'Raleway', cursive;
-    font-weight:lighter;
-    text-shadow: 1px 1px black;
 
-    /*Augmente l'espace entre les lignes pour rendre le texte plus lisible avec le glow*/
-    line-height: 2;
 }
 
 body{
@@ -29,6 +27,17 @@ body{
     margin: 0;
     /* display: grid;
     grid-template-rows: 35%; */
+
+    font-family: 'Raleway', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-weight:lighter;
+   
+    font-style: normal;
+    
+    text-shadow: 1px 1px rgb(32, 32, 32);
+
+    /*Augmente l'espace entre les lignes pour rendre le texte plus lisible avec le glow*/
+    line-height: 2;
    
 }
 
@@ -45,19 +54,26 @@ main{
 h2{
     /* color: hotpink; */
 
-    color: aliceblue;
+    /* color: aliceblue;
     background-image: url("./Textures/triangular_teal.png");
 
-    width:fit-content;
+    width:fit-content; */
     padding-left: 10px;
     padding-right: 10px;
 
-    border: #444 solid;
+    /* border: #444 solid;
     border-right: transparent;
     border-top: transparent;
     border-radius: 4px;
 
-    box-shadow: 0px 2px 20px 0px black;
+    box-shadow: 0px 2px 20px 0px black; */
+
+    font-style: italic;
+    font-weight: bolder;
+
+    color: whitesmoke;
+    font-size: 3rem;
+    text-shadow: 2px 3px black;
 
 }
 
@@ -76,7 +92,7 @@ p, h2, h3{
 }
 
 h2, h3{
-    color: whitesmoke;
+    /* color: whitesmoke; */
 }
 
 a{
@@ -85,7 +101,8 @@ a{
 
 a:link,
 a:visited{
-text-decoration: none;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 a:hover{

@@ -42,9 +42,14 @@ main{
     gap: 15px; 
     padding: 25px;
     
+    
 
 }
 
+.contact h3{
+    margin-left: 0;
+    border-bottom: #444 solid;
+}
 .contact article {
     
     width: 10%;
@@ -98,9 +103,9 @@ main{
     border: #444 solid;
     border-right: transparent;
     border-top: transparent;
-    border-radius: 4px;
 
     box-shadow: 0px 2px 20px 0px black;
+
 
     border-radius: 10px;
     padding: 10px;
@@ -137,6 +142,11 @@ main{
     padding: 0;
 
     border-radius: 25px;
+
+    border: #444 solid 2px;
+    border-right: transparent;
+    border-top: transparent;
+    box-shadow: 0px 2px 20px 0px black;
 }
 
 

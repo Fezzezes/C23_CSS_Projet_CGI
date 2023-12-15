@@ -10,10 +10,6 @@ main{
 }
 
 
-
-
-
-
 article {
     /*empeche les nouvelles de wrapper en colonne*/
 	white-space: nowrap;
@@ -25,6 +21,7 @@ article {
     /*cache les nouvelles à l'extérieur de l'écran*/
     overflow: hidden;
 }
+
 
 label {
 	color: #fff;
@@ -58,6 +55,7 @@ label {
     background: none;
     border: none;
     box-shadow: none;
+
 }
 
 .section_milieu_impactes{
@@ -98,7 +96,9 @@ label {
     text-overflow:ellipsis;
     overflow: hidden;
 
-    color:#444;
+    color:white;
+    text-shadow: 2px 2px black;
+    font-style: italic;
 
     /* background-image: url("./Textures/prism.png");
     border-radius: 20px 20px 0px 0px;
@@ -125,6 +125,10 @@ label {
 
 
     border-radius: 25px;
+}
+
+a:hover{
+    background-color: transparent;
 }
 
 a img:hover{
