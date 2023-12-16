@@ -8,6 +8,8 @@
 /*poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,900;1,600;1,900&display=swap');
 
+/*babas neue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Raleway:wght@600&family=Roboto+Mono:wght@100;500&display=swap');
 
 *,*::before,*::after{
     /*Force le box-sizing a tout tout tout le monde*/
@@ -18,6 +20,7 @@
     /*Font par default de la page*/
     /* font-family: 'Fredericka the Great', cursive; */
 
+    /* outline: 1px solid red; */
 }
 
 body{
@@ -48,6 +51,70 @@ main{
     background-image: url("./Textures/aqua_naturel.png");
     padding-top: 50px;
      
+}
+
+h1{
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 10rem;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+
+
+    width: 100%;
+    height: fit-content;
+
+
+
+    color: aliceblue;
+    text-align: center;
+    
+
+    text-shadow: 4px 4px black;
+    animation: battementCoeur 0.75s infinite alternate;
+
+   
+
+}
+
+@keyframes battementCoeur{
+    0%
+    {
+      transform: scale( .75 );
+      color: white;
+      
+    }
+    15%
+    {
+      transform: scale(2 );
+      color: rgba(255, 0, 0, 0.438);
+      text-shadow: 4px 4px rgb(223, 125, 125);
+      /* color: #00bf9979;
+      text-shadow: 4px 4px #00BF9A; */
+    }
+    30%
+    {
+      transform: scale( .85 );
+      color: white;
+    }
+    35%
+    {
+      transform: scale( 2 );
+      color: rgba(255, 0, 0, 0.438);
+      text-shadow: 4px 4px rgb(223, 125, 125);
+      /* color: #00bf9979;
+      text-shadow: 4px 4px #00BF9A; */
+
+    }
+    80%
+    {
+      transform: scale( .85 );
+    }
+    100%
+    {
+      transform: scale( .85 );
+    }
 }
 
 
@@ -84,15 +151,11 @@ p{
     padding: 20px;
 }
 
-p, h2, h3{
+p,h2, h3{
 
     margin: 0;
     margin-right: 10px;
     margin-left: 20px;
-}
-
-h2, h3{
-    /* color: whitesmoke; */
 }
 
 a{
@@ -111,32 +174,41 @@ a:hover{
     border-radius: 5px;
 }
 
-
-
 header{
-    width: 100%;
-    height: 300px;
 
+    width: 100vw;
+
+    /*aligne le h1 au centre*/
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    overflow: hidden;
+    position: relative;
 }
 
-.banniere{
+.banniere_images{
 
-    /*Place la banniere en au de l'écran avec la largeur complete de l'écran*/
-    background-color: chocolate;
-    background-image: url("./Images/frontCommun.jpg");
-    background-position: 5px;
-    width: 100%;
-    height: 300px;
-    position:fixed;
-    top: 0;
-    left: 0;
-    color: aliceblue;
-    text-align: center;
-    text-shadow: 2px 2px black;
-    margin: 0;
-
-    z-index: -1;   
+    height: auto;
+    display: flex;
+    overflow: hidden;
 }
+
+
+
+.banniere_images img{
+
+    animation: scrollBanniere1 80s linear infinite;   
+    z-index: -100;
+    
+    border: 0;
+    white-space: nowrap;
+}
+
+@keyframes scrollBanniere1{
+    0%{transform: translateX(0);} 
+    100%{transform: translateX(-100%);} 
+}
+
 
 nav{
     background-image: url(./Textures/prism.png);
@@ -199,8 +271,7 @@ footer::before
 }
 
 footer{
-    /* background-color: blueviolet; */
-    
+
     background-image: url(./Textures/prism.png);
     margin: 0;
     padding: 0;

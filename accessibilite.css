@@ -1,27 +1,38 @@
 @charset "utf-8";
 
 
-@media screen and (max-width:500px) {
-
-    .contact article {
-        width: 100%;
-    }
-}
-
-
 /*Téléphone mobile*/
-@media screen and (max-width:768px) {
+@media screen and  (max-width:768px) {
 
     body{
         /* border: red dotted 8px; */
         font-size: 1rem;
     }
 
+    h1{
+        font-size: 6rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .banniere_images{
+        height: 150px;
+
+    }
+
+
+
     /*accueil*/
     article img{
         display:inline;
     }
-
+    
 
     .a_propos,
     .presentation_contenu{
@@ -40,16 +51,43 @@
         width: 100%;
     }
 
+    .nouvelle{
+        grid-template-rows: min-content auto;
+    }
+
+    .nouvelle h3{
+        font-size: 1.2rem;
+        line-height: 1.3;
+        height: fit-content;
+    }
     /*explication*/
     .nouvelle img{
         /*cache l'image si l'écran est trop petit*/
         content-visibility: hidden;
     }
 
+    .nouvelle:hover img{
+        background-color: transparent;
+        border: none
+    }
+
     .nouvelle p{
         /*donne l'espace anciennement occupé par l'image au texte*/
         grid-column-start: 2;
+        /* font-size: 0.8rem; */
+    
     }
+
+
+
+    .nouvelles_wrapper label:before,
+    .nouvelles_wrapper label:after {
+        /*fleche droite*/
+        width: 0.2rem;
+        font-size: 1.9rem;
+    }
+
+
 
     /*contact*/
     .main_contact{
@@ -64,22 +102,54 @@
     }
 
     .div_contact p{
-        font-size: 1.2em;
+        font-size: 1rem;
     }
 }
 /*Tablette*/
 @media screen and (min-width: 768px)and (max-width:1200px){
+
+
     body{
-        /* border: rgb(255, 187, 0) dashed 8px; */
+        /* border: rgb(255, 187, 0) dotted 8px; */
         font-size: 1rem;
     }
 
+    h1{
+        /* font-size: 3rem; */
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+
+
+    
+    /*Accueuil*/
     .presentation_contenu{
         display: grid;
         grid-template-columns: auto 200px;
         grid-template-rows: 200px;
     }
 
+    /*Explication*/
+
+    .nouvelle h3{
+        font-size: 1.4rem;
+    }
+
+    .nouvelles_wrapper label:before,
+    .nouvelles_wrapper label:after {
+        /*fleche droite*/
+        width: 1.5rem;
+        font-size: 2rem;
+    }
+
+    /*Contacts*/
     .contact article:nth-child(3) {
     
         width: 100%;
@@ -100,6 +170,10 @@
     .div_contact p{
         font-size: 1.2em;
     }
+
+
+    
+
 
 }
 
