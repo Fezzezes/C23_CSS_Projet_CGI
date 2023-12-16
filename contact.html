@@ -24,58 +24,42 @@
         <a class="nav_active" href="./contact.html">Contact</a> 
     </nav>
     <main class="main_contact">
-        <section class="formulaire_contact">
+        <section class="section_formulaire">
             <!-- Formulaire de Contact -->
             <!-- <h2>Formulaire de commentaire</h2> -->
-            <div class="formulaire_nom">
-                <input type="texte" placeholder="nom">
-            </div>
-            <div class="formulaire_prenom">
-                <input type="texte" placeholder="prénom">
-            </div>
-            <div class="formulaire_courriel">
-                <input type="texte" placeholder="email@email.com">
-            </div>
-
-            <div class="formulaire_commentaire">
-                <textarea  placeholder="Questions? Commentaires? Insultes?"></textarea>
-            </div>
-            <div class="fomulaire_envoyer">
-                <button class="envoyer"><span>Envoyer</span></button>
-            </div>
+            <form id="formulaire_contact">
+                <input class="formulaire_nom" type="texte" placeholder="nom">
+                <input class="formulaire_prenom" type="texte" placeholder="prénom">
+                <input class="formulaire_courriel type="texte" placeholder="email@email.com">
+                <textarea  class="formulaire_commentaire" placeholder="Questions? Commentaires? Insultes?"></textarea>
+                <button class="envoyer" formtarget="_self" form="formulaire_contact"><span>Envoyer</span></button>
+            </form>
         </section>
-        <section class="contact">
-            <article>
-                <div class="div_contact">
+        <section class="section_contact">
+            <article class="div_contact">
                     <h3 class="contact_centrales">CSN</h3>
                     <p class="contact_nom">Noémi Desrochers</p>
                     <p class="contact_email">noemi.desrochers@csn.qc.ca</p>
                     <p class="contact_telephone">514 216-1825</p>
-                </div>
             </article>
-            <article>
-                <div class="div_contact">
+            <article class="div_contact">
                     <h3 class="contact_centrales">CSQ</h3>
                     <p class="contact_nom">Maude Messier</p>
                     <p class="contact_email">messier.maude@lacsq.org</p>
                     <p class="contact_telephone">514 213-0770</p>
-                </div class="div_contact">
             </article>
-            <article>
-                <div class="div_contact">
+            <article class="div_contact">
                     <h3 class="contact_centrales">FTQ</h3>
                     <p class="contact_nom">Jean Laverdière</p>
                     <p class="contact_email">jlaverdiere@ftq.qc.ca</p>
                     <p class="contact_telephone">514 893-7809</p>
                 </div>
             </article>
-            <article>
-                <div class="div_contact">
+            <article class="div_contact">
                     <h3 class="contact_centrales">APTS</h3>
                     <p class="contact_nom">Maxime Clément</p>
                     <p class="contact_email">mclement@aptsq.com</p>
                     <p class="contact_telephone">514 792-0481</p>
-                </div>
             </article>
         </section>
     </main>

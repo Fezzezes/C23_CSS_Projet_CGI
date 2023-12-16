@@ -63,9 +63,7 @@ h1{
 
 
     width: 100%;
-    height: fit-content;
-
-
+    
 
     color: aliceblue;
     text-align: center;
@@ -291,6 +289,7 @@ footer ul{
     justify-content: space-around;
     align-items: center;
     margin: 0;
+    padding: 0;
 
     align-self: flex-end;
 

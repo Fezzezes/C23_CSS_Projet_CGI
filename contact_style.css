@@ -28,110 +28,33 @@ main{
 
 
 
-.contact{
 
+
+.section_formulaire{
     width: 100%;
-    grid-column-start: 2 ;
-    grid-column-end: 3;
-
-    display: grid;
-
-    /* grid-template-columns: auto auto auto auto; */
-
-    /* margin: 25px;*/
-    gap: 15px; 
-    padding: 25px;
+    background-image: url("./Textures/triangular.png");
+    padding: 15px;
     
-    
-
-}
-
-.contact h3{
-    margin-left: 0;
-    border-bottom: #444 solid;
-}
-.contact article {
-    
-    width: 10%;
-    grid-column-start: auto;
-    grid-column-end: auto;
-}
-
-.contact article:first-child {
-    
-    width: 100%;
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-.contact article:nth-child(2) {
-    
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.contact article:nth-child(3) {
-    
-    width: 100%;
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-.contact article:nth-child(4) {
-    
-    width: 100%;
-    grid-column-start: 4;
-    grid-column-end: 5;
-}
-
-.contact article {
-/*     
-    width: 10%;
-    grid-column-start: auto;
-    grid-column-end: auto; */
-}
-
-.div_contact{
-    
-    color: aliceblue;
-    background-image: url("./Textures/triangular_teal.png");
-
- 
-    padding-left: 10px;
-    padding-right: 10px;
-
-    border: #444 solid;
+    border-radius: 25px;
+    border: #444 solid 2px;
     border-right: transparent;
     border-top: transparent;
 
     box-shadow: 0px 2px 20px 0px black;
-
-
-    border-radius: 10px;
-    padding: 10px;
 }
 
+.section_formulaire form{
 
-.div_contact p{
-    margin: 0;
-    padding: 0;
-    font-size: 0.8em;
-}
-
-.formulaire_contact{
-
-    background-image: url("./Textures/triangular.png");
-
+    
     width: 100%;
     height: 70%;
 
-    grid-column-start: 1 ;
-    grid-column-end: 2;
+
 
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: minmax(40px, 10%) minmax(40px, 10%)  auto minmax(50px, 10%) ;
-    gap: 5px;
+    grid-template-rows: minmax(40px, 10%) minmax(40px, 10%);
+    gap: 10px;
 
     /* display: flex;
     flex-direction: row;
@@ -141,12 +64,9 @@ main{
     margin: 0;
     padding: 0;
 
-    border-radius: 25px;
+   
 
-    border: #444 solid 2px;
-    border-right: transparent;
-    border-top: transparent;
-    box-shadow: 0px 2px 20px 0px black;
+    
 }
 
 
@@ -154,9 +74,9 @@ main{
 .formulaire_prenom,
 .formulaire_courriel,
 .formulaire_commentaire,
-.fomulaire_envoyer{
+.envoyer{
 
-    background-color: transparent !important;
+    background-color:aliceblue;
     
     width: 100%;
 
@@ -164,17 +84,6 @@ main{
     padding: 10px;
     height: 100%;
     min-height: 40px;
-}
-
-.formulaire_nom input, 
-.formulaire_prenom input,
-.formulaire_courriel input,
-.formulaire_commentaire textarea,
-.fomulaire_envoyer button
-{
-    width: 100%;
-    display: block;
-    margin: 0;
 
     border: transparent;
     border-radius: 10px;
@@ -208,11 +117,9 @@ main{
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 4;
-
-    padding: 10px;
 }
 
-.fomulaire_envoyer{
+.envoyer{
     
     grid-column-start: 1;
     grid-column-end: 3;
@@ -220,12 +127,85 @@ main{
     grid-row-end: 5;
 }
 
-.formulaire_commentaire textarea{
-
-    height: 100%;
+.envoyer:hover{
+    cursor: pointer;
+    border: #444444a1 solid;
 }
 
-.fomulaire_envoyer button{
+.section_contact{
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    /* margin: 25px; */
+    gap: 15px; 
+    padding: 25px;
+}
+
+.section_contact h3{
+    margin-left: 0;
+    border-bottom: #444 solid;
+}
+
+.section_contact article{
+    
+    width: 100%;
+
+    grid-row-start: 1;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    color: aliceblue;
+    background-image: url("./Textures/triangular_teal.png");
+
+    padding: 10px;
+
+
+    border: #444 solid;
+    border-right: transparent;
+    border-top: transparent;
+
+    box-shadow: 0px 2px 20px 0px black;
+
+    border-radius: 10px;
+    
+}
+
+.section_contact article p{
+    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    font-size: 0.6em;
+    white-space: normal;
+}
+
+.contact article:first-child {
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.contact article:nth-child(2) {
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.contact article:nth-child(3) {
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.contact article:nth-child(4) {
+
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 
 
