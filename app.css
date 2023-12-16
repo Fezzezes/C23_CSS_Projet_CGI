@@ -13,7 +13,7 @@
     -moz-box-sizing: border-box;
          box-sizing: border-box;
 
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 body{
@@ -29,14 +29,14 @@ body{
     font-style: normal;
     
     /*petit shadow pour faire ressortir les lettres*/
-    text-shadow: 1px 1px rgb(32, 32, 32);
+    color: #000000;
+    text-shadow: 1px 1px gray;
     /*Augmente l'espace entre les lignes pour rendre le texte plus lisible avec le text-shadow*/
     line-height: 2;
     
     /*largeur de l'écran*/
     width: 100vw;
 }
-
 
 main{
     /*padding entre la premiere section et la barre de naviguation*/
@@ -85,12 +85,8 @@ h1{
       text-shadow: 4px 4px #00BF9A;
     }
     /*crée une pause après 2 battement de coeur*/
-    80%{
-      transform: scale(1);
-    }
-    100%{
-      transform: scale(1);
-    }
+    80%{transform: scale(1);}
+    100%{transform: scale(1);}
 
     /* couleur alternative
     ###############################
@@ -98,7 +94,6 @@ h1{
     text-shadow: 4px 4px rgb(223, 125, 125); 
     */
 }
-
 
 h2{
 
@@ -131,17 +126,20 @@ p, h2, h3{
 
 a{
     /*couleur du texte des liens*/
+    text-shadow: 2px 2px black;
     color: #00BF9A;
 }
 
 a:link,
 a:visited{
+
     /*enlève le text-decoration des liens+liens visité*/
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover{
+
     /*lorsqu'on place le curseur sur un lien, ajout un background et change la couleur pour noir*/
     background-color: #00BF9A;
     color: black;
@@ -164,8 +162,6 @@ header{
     display: flex;
 }
 
-
-
 .banniere_images img{
 
     /*scroll les images*/
@@ -175,13 +171,14 @@ header{
 }
 
 @keyframes scrollBanniere1{
+
     /*bouge l'image completement vers la gauche */
     0%{transform: translateX(0);} 
     100%{transform: translateX(-100%);} 
 }
 
-
 nav{
+
     /*background de la barre de navigation*/
     background-image: url(./Textures/prism.png);
     /*place les éléments en row avec wrap, aligné au centre et prenant le plus d'espace possible entre eux*/
@@ -206,24 +203,23 @@ nav{
     border-radius: 2px;
 }
 
-
 nav a{
+
     /*chaque liens de la barre de navigation aura un extra padding de 10px à gauche et à droite*/
     padding-left: 10px;
     padding-right: 10px;
 }
 
-
-
 nav a.nav_active{
+
     /*la page actuelle sera entourée par une bordure et le texte sera blanc*/
     border:#00BF9A solid;
     border-radius: 5px;
     color: aliceblue;
 }
 
-footer::before
-{
+footer::before{
+
     /*ajoute un élément vide devant le footer avec un background identique au reste du body*/
     content: '';
     background-image: url(./Textures/aqua_naturel.png);
@@ -237,7 +233,6 @@ footer::before
 }
 
 footer{
-
     /*background du footer identique au nav*/
     /*background nécéssaire pour l'effet de coin inversé*/
     background-image: url(./Textures/prism.png);
@@ -261,5 +256,4 @@ footer ul{
 
     /*la liste dans le footer n'aura pas de bullet point*/
     list-style: none;
-
 }
