@@ -1,172 +1,148 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
-/*chalk font*/
-@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Roboto+Mono:wght@100;500&display=swap');
-/*raleway*/
-@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Raleway:wght@600&family=Roboto+Mono:wght@100;500&display=swap');
-
 /*poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,900;1,600;1,900&display=swap');
 
 /*babas neue*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Raleway:wght@600&family=Roboto+Mono:wght@100;500&display=swap');
 
-*,*::before,*::after{
-    /*Force le box-sizing a tout tout tout le monde*/
+*,
+*::before,
+*::after{
+    /*Force le box-sizing a tout tout tout le monde sans discrimination*/
+    /*inclus le padding et les bordures dans le calcul du width et height, redonne sens à la vie*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
          box-sizing: border-box;
-
-    /*Font par default de la page*/
-    /* font-family: 'Fredericka the Great', cursive; */
 
     /* outline: 1px solid red; */
 }
 
 body{
 
-    background-image: url(./Textures/vintage-concrete.png);
+    /*image background mur couleur aqua*/
     background-image: url("./Textures/aqua_naturel.png");
+    /*aucun marge*/
     margin: 0;
-    /* display: grid;
-    grid-template-rows: 35%; */
 
-    font-family: 'Raleway', cursive;
+    /*Par defaut: Font poppins, pas gras, pas italique*/
     font-family: 'Poppins', sans-serif;
     font-weight:lighter;
-   
     font-style: normal;
     
+    /*petit shadow pour faire ressortir les lettres*/
     text-shadow: 1px 1px rgb(32, 32, 32);
-
-    /*Augmente l'espace entre les lignes pour rendre le texte plus lisible avec le glow*/
+    /*Augmente l'espace entre les lignes pour rendre le texte plus lisible avec le text-shadow*/
     line-height: 2;
-   
+    
+    /*largeur de l'écran*/
+    width: 100vw;
 }
 
 
-
 main{
-    background-image: url(./Textures/vintage-concrete.png);
-    background-image: url("./Textures/aqua_naturel.png");
+    /*padding entre la premiere section et la barre de naviguation*/
     padding-top: 50px;
-     
 }
 
 h1{
 
+    /*Le titre su la bannière*/
+    /*Le titre de banniere aura son propre font, sera blanc, aura une taille de 10 rem, aura un plus gros text-shadow */
     font-family: "Bebas Neue", sans-serif;
     font-size: 10rem;
+    text-shadow: 4px 4px black;
+    color: aliceblue;
+
+    /*positionner le texte au centre de la banniere*/
     margin: 0;
     padding: 0;
     position:absolute;
-
-
     width: 100%;
-    
-
-    color: aliceblue;
     text-align: center;
     
-
-    text-shadow: 4px 4px black;
+    /*animation pour faire battre le titre comme un battement de coeur*/
     animation: battementCoeur 0.75s infinite alternate;
-
-   
-
 }
 
 @keyframes battementCoeur{
-    0%
-    {
-      transform: scale( .75 );
-      color: white;
-      
-    }
-    15%
-    {
-      transform: scale(2 );
-      color: rgba(255, 0, 0, 0.438);
-      text-shadow: 4px 4px rgb(223, 125, 125);
-      /* color: #00bf9979;
-      text-shadow: 4px 4px #00BF9A; */
-    }
-    30%
-    {
-      transform: scale( .85 );
-      color: white;
-    }
-    35%
-    {
-      transform: scale( 2 );
-      color: rgba(255, 0, 0, 0.438);
-      text-shadow: 4px 4px rgb(223, 125, 125);
-      /* color: #00bf9979;
-      text-shadow: 4px 4px #00BF9A; */
 
+    /*double la taille du texte, 2 fois*/
+    0%{
+        transform: scale(1);color: white;
     }
-    80%
-    {
-      transform: scale( .85 );
+    15%{
+      transform: scale(2);
+      /*change la couleur du texte(avec de la transparence pour donner un effet avec le text-shadow)
+       et change la couleur du text-shadow pour une couleur plus pale*/
+      color: #00bf9979;
+      text-shadow: 4px 4px #00BF9A;
     }
-    100%
-    {
-      transform: scale( .85 );
+    30%{
+        transform: scale(1);color: white;
     }
+    35%{
+      transform: scale(2);
+      color: #00bf9979;
+      text-shadow: 4px 4px #00BF9A;
+    }
+    /*crée une pause après 2 battement de coeur*/
+    80%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1);
+    }
+
+    /* couleur alternative
+    ###############################
+    color: rgba(255, 0, 0, 0.438);
+    text-shadow: 4px 4px rgb(223, 125, 125); 
+    */
 }
 
 
 h2{
-    /* color: hotpink; */
 
-    /* color: aliceblue;
-    background-image: url("./Textures/triangular_teal.png");
-
-    width:fit-content; */
+    /*padding gauche droite*/
     padding-left: 10px;
     padding-right: 10px;
 
-    /* border: #444 solid;
-    border-right: transparent;
-    border-top: transparent;
-    border-radius: 4px;
-
-    box-shadow: 0px 2px 20px 0px black; */
-
+    /*les h2 seront italique et gras, size 3 rem*/
+    font-size: 3rem;
     font-style: italic;
     font-weight: bolder;
 
+    /*blanc avec un text-shadow plus grand*/
     color: whitesmoke;
-    font-size: 3rem;
     text-shadow: 2px 3px black;
-
 }
 
 p{
-    margin-right: 10px;
-    margin-left: 20px;
-    padding-left: 10px;
+    /*padding par défaut des paragraphes*/
     padding: 20px;
 }
 
-p,h2, h3{
+p, h2, h3{
 
+    /*marge gauche et droite pour le texte*/
     margin: 0;
     margin-right: 10px;
     margin-left: 20px;
 }
 
 a{
+    /*couleur du texte des liens*/
     color: #00BF9A;
 }
 
 a:link,
 a:visited{
+    /*enlève le text-decoration des liens+liens visité*/
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover{
+    /*lorsqu'on place le curseur sur un lien, ajout un background et change la couleur pour noir*/
     background-color: #00BF9A;
     color: black;
     border-radius: 5px;
@@ -174,125 +150,116 @@ a:hover{
 
 header{
 
+    /*contient la bannière(images et titres)*/
+    /*fait la largeur de l'écran*/
     width: 100vw;
-
-    /*aligne le h1 au centre*/
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    overflow: hidden;
     position: relative;
+    /*cache l'overflow (le carousel d'image va overflow, c'est voulu)*/
+    overflow: hidden;  
 }
 
 .banniere_images{
 
-    height: auto;
+    /*le carousel est formé de 2 images identiques, place ceux-ci à la suite de l'autre*/
     display: flex;
-    overflow: hidden;
 }
 
 
 
 .banniere_images img{
 
-    animation: scrollBanniere1 80s linear infinite;   
+    /*scroll les images*/
+    animation: scrollBanniere1 80s linear infinite;  
+    /*la bannière est derrière absolument tout*/ 
     z-index: -100;
-    
-    border: 0;
-    white-space: nowrap;
 }
 
 @keyframes scrollBanniere1{
+    /*bouge l'image completement vers la gauche */
     0%{transform: translateX(0);} 
     100%{transform: translateX(-100%);} 
 }
 
 
 nav{
+    /*background de la barre de navigation*/
     background-image: url(./Textures/prism.png);
+    /*place les éléments en row avec wrap, aligné au centre et prenant le plus d'espace possible entre eux*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 
+    /*force la barre de navigation à garder ça position au top de l'écran*/
     position: sticky;
-
     top: 0;
     /*Place la barre de nav par-dessus tout*/
     z-index: 100;
+
+    /*padding général de 10px*/
     padding: 10px;
 
+    /*ajoute une dimension à la barre de navigation*/
     border-top: rgba(128, 128, 128, 0.13) solid 4px;
     box-shadow: 0px 5px 10px 2px;
     border-radius: 2px;
-
 }
 
 
 nav a{
+    /*chaque liens de la barre de navigation aura un extra padding de 10px à gauche et à droite*/
     padding-left: 10px;
     padding-right: 10px;
-    align-self: center;
 }
 
 
 
 nav a.nav_active{
+    /*la page actuelle sera entourée par une bordure et le texte sera blanc*/
     border:#00BF9A solid;
     border-radius: 5px;
     color: aliceblue;
 }
 
-
-ul 
-{
-    background-color: rgb(168, 73, 73);
-    list-style: none;
-}
-
-li{
-   color:whitesmoke;
-}
-
 footer::before
 {
-    height: 100px;
+    /*ajoute un élément vide devant le footer avec un background identique au reste du body*/
     content: '';
-    display: block;
-
-
-    border-radius: 0px 0px 40px 40px;
     background-image: url(./Textures/aqua_naturel.png);
 
+    /*il y aura toujours au moins 100px entre le footer et le reste du body*/
+    height: 100px;
+    display: block;
     
+    /*ce border radius + le background identique au body donne un effet de coin de bordure inversé*/
+    border-radius: 0px 0px 40px 40px;
 }
 
 footer{
 
+    /*background du footer identique au nav*/
+    /*background nécéssaire pour l'effet de coin inversé*/
     background-image: url(./Textures/prism.png);
-    margin: 0;
-    padding: 0;
-
-    width: 100%;
-    position:absolute;
-
-    left: 0;
+    /*fait la largeur de l'écran*/
+    width: 100vw;
 }
 
 footer ul{
 
+    /*background identique au footer*/
     background-image: url(./Textures/prism.png);
     
+    /*placement en row space around*/
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+
+    /*pas de marges pas de paddings*/
     margin: 0;
     padding: 0;
 
-    align-self: flex-end;
-
-    border-radius: -40px 0px 0px 0px;
+    /*la liste dans le footer n'aura pas de bullet point*/
+    list-style: none;
 
 }
