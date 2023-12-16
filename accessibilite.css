@@ -112,7 +112,6 @@
 
     .nouvelles_wrapper label:before,
     .nouvelles_wrapper label:after {
-        /*fleche droite*/
         width: 0.2rem;
         font-size: 1.9rem;
 
@@ -121,19 +120,6 @@
         line-height: 2rem;
         
     }
-
-    /* .nouvelles_wrapper label:after {
-    
-        border: red solid;
-        border-top-right-radius: 745px;
-        border-top-left-radius: 775px;
-       
-    }
-    .nouvelles_wrapper label:before{
-        border-top-right-radius: 75px;
-        border-top-left-radius: 75px;
-    } */
-
 
 
     /*contact*/
@@ -196,7 +182,7 @@
 
     .nouvelles_wrapper label:before,
     .nouvelles_wrapper label:after {
-        /*fleche droite*/
+        line-height: 15rem;
         width: 1.5rem;
         font-size: 2rem;
     }
@@ -229,11 +215,6 @@
     .section_contact article p{
         font-size: 1.2em;
     }
-
-
-    
-
-
 }
 
 /*Ordinateur*/

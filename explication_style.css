@@ -1,6 +1,5 @@
 
 
-
 main{
 
     display: flex;
@@ -200,31 +199,32 @@ label:after {
 	padding: 1rem;
 	font-size: 3rem;
 
-    /* border: red solid; */
+   
 	
-	line-height: 10rem;
+	line-height: 25rem;
+    /*place au centre*/
 	top: 50%;
 	transform: translate3d(0, -50%, 0);
 	cursor: pointer;
-    z-index: 50;
+    z-index: 150;
 }
 
-.nouvelles_wrapper label:before {
-    /*fleche droite*/
+
+label:before {
+    /*fleche droite déplace vers le prochain article*/
 	content: "\276D";
 	right: 103%;
 	border-top-left-radius: 50%;
 	border-bottom-left-radius: 50%;
-    
 }
 
-.nouvelles_wrapper label:after {
-    /*fleche gauche*/
+label:after {
+    /*fleche gauche déplace vers l'article précédent*/
 	content: "\276C";
 	left: 103%;
 	border-top-right-radius: 50%;
 	border-bottom-right-radius: 50%;
-    
+    z-index: 300;
 }
 
 
