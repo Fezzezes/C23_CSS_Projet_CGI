@@ -1,4 +1,7 @@
 
+
+/*Source d'aide pour le carousel de nouvelle: https://codepen.io/dp_lewis/pen/WNZQzN*/
+
 :root{
     /*les nouvelle_wrappers et noulle_labels doivent etre freres mais avoir la meme largeur toujours*/
     --const-largeur_nouvelle: 95%;
