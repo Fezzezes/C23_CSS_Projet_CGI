@@ -30,7 +30,7 @@
     box-shadow: none;
 }
 
-.nouvelles_wrapper {
+.page_des_nouvelles {
 
     /*une colonne par nouvelle*/
     display: grid;
@@ -41,6 +41,14 @@
 
     height: 100%;
 }
+
+.wrapper_nouvelle{
+    transition: transform 400ms ease-out;
+    width: 95%;
+    justify-self: center;
+}
+
+
 
 .nouvelle{
 
@@ -75,7 +83,7 @@
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
 
-    transition: transform 400ms ease-out;
+
 }
 
 .nouvelle h3{
@@ -161,28 +169,28 @@ input {
 }
 
 
-#nouvelle_1,#label_nouvelle_1{
+#wrapper_nouvelle_1,#label_nouvelle_1{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2; 
 }
-#nouvelle_2,#label_nouvelle_2{
+#wrapper_nouvelle_2,#label_nouvelle_2{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2; 
 }
-#nouvelle_3,#label_nouvelle_3{
+#wrapper_nouvelle_3,#label_nouvelle_3{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2; 
 }
 
-#nouvelle_1:checked:checked ~ #label_nouvelle_1, 
-#nouvelle_2:checked:checked ~ #label_nouvelle_2,
-#nouvelle_3:checked:checked ~ #label_nouvelle_3{
+#nouvelle_1:checked ~ #label_nouvelle_1, 
+#nouvelle_2:checked ~ #label_nouvelle_2,
+#nouvelle_3:checked ~ #label_nouvelle_3{
     
    z-index: 0;
 }
@@ -190,7 +198,7 @@ input {
 
 /*bouge tout les labels suivant input1 de 0 quand le bouton input 3 est checked*/
 #nouvelle_1:checked ~ label,
-#nouvelle_1:checked ~ label + a{
+#nouvelle_1:checked ~ label + article{
     /*mouvement lorsqu'on appui sur un bouton*/
     border: red solid 2px;
 	transform: translate3d(0, 0, 0);
@@ -198,24 +206,24 @@ input {
 
 /*bouge tout les labels suivant input2 de -103% quand le bouton input 3 est checked*/
 #nouvelle_2:checked ~ label,
-#nouvelle_2:checked ~ label + a{
+#nouvelle_2:checked ~ label + article{
   
     border: rgb(0, 17, 255) solid 2px;
-	transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-105%, 0, 0);
 }
 
 /*bouge tout les labels suivant input3 de -203% quand le bouton input 3 est checked*/
 #nouvelle_3:checked ~ label,
-#nouvelle_3:checked ~ label + a {
+#nouvelle_3:checked ~ label + article{
     
     border: rgb(0, 255, 42) solid 2px;
-	transform: translate3d(-200%, 0, 0);
+	transform: translate3d(-210%, 0, 0);
 }
 
 
 label {
 
-    width: 100%;
+    width: 95%;
     /*la grosseur du bouton s'ajuste avec la grosseur de l'écran*/
     height: 50vh;
 
@@ -233,23 +241,24 @@ label {
     justify-self: center;
 }
 
-.nouvelles_wrapper label:before,
-.nouvelles_wrapper label:after {
+
+.page_des_nouvelles label:before,
+.page_des_nouvelles label:after {
 
      /*couleur de la fleche*/
     background-color:#444444af;
 	color: #fff;
     /*dimension de la fleche*/
-	padding: 1rem;
-    width: 1.5rem;
+	padding: 2rem;
+    width: 2rem;
     height: 100px;
-	font-size: 2rem;
-    line-height: 4rem;
+	font-size: 4rem;
+    line-height: 2rem;
 
     /*place en haut des nouvelles*/
     /*positionnement de la fleche*/
 	position: absolute;
-    top: 9%;
+    top: 12%;
     
 
 
@@ -262,20 +271,20 @@ label {
 }
 
 
-.nouvelles_wrapper label:before {
+.page_des_nouvelles label:before {
     /*fleche droite déplace vers le prochain article*/
 	content: "\276D";
-	right: 103%;
+	right: 105%;
     /*courbe les coins voulus*/
 	border-top-left-radius: 50%;
 	border-bottom-left-radius: 50%;
 
 }
 
-.nouvelles_wrapper label:after {
+.page_des_nouvelles label:after {
     /*fleche gauche déplace vers l'article précédent*/
 	content: "\276C";
-	left: 103%;
+	left: 105%;
     /*courbe les coins voulus*/
 	border-top-right-radius: 50%;
 	border-bottom-right-radius: 50%;
