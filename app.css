@@ -5,7 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Blaka+Ink&family=Calligraffitti&family=Fredericka+the+Great&family=Josefin+Sans:ital@1&family=Kanit:ital,wght@0,500;1,500&family=Press+Start+2P&family=Raleway:wght@600&family=Roboto+Mono:wght@100;500&display=swap');
 
 :root{
-
+    /*les nouvelle_wrappers et noulle_labels doivent etre freres mais avoir la meme largeur toujours*/
+    --const-largeur_nouvelle: 95%;
+    /*chaque translateX d'un wrapper de nouvelle doit avoir +5% d"offset*/
+    --offset_page_nouvelle:5%;
 }
 
 *,

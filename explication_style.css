@@ -1,5 +1,13 @@
 
 
+/*Source d'aide pour le carousel de nouvelle: https://codepen.io/dp_lewis/pen/WNZQzN*/
+
+:root{
+    /*les nouvelle_wrappers et noulle_labels doivent etre freres mais avoir la meme largeur toujours*/
+    --const-largeur_nouvelle: 95%;
+    /*chaque translateX d'un wrapper de nouvelle doit avoir +5% d"offset*/
+    --offset_page_nouvelle:-5%;
+}
 
 .section_milieu_impactes{
     /*donne du padding entre cette section et la section des actualité*/
@@ -30,7 +38,7 @@
     box-shadow: none;
 }
 
-article {
+.page_des_nouvelles {
 
     /*une colonne par nouvelle*/
     display: grid;
@@ -41,6 +49,16 @@ article {
 
     height: 100%;
 }
+
+.wrapper_nouvelle{
+    /*centre les nouvelles avec la meme largeur de le label*/
+    width: var(--const-largeur_nouvelle);
+    justify-self: center;
+    /*transition lorsqu'on change de nouvelle*/
+    transition: transform 400ms ease-out;
+}
+
+
 
 .nouvelle{
 
@@ -74,6 +92,8 @@ article {
     border-right: none;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+
+
 }
 
 .nouvelle h3{
@@ -130,11 +150,12 @@ article {
 
     /*permet de scroll si le texte est trop long*/
     overflow:auto;
-    text-wrap: wrap;
-
+ 
     /*visuel*/
     border-radius: 25px;
     background-color: #44444494;
+
+    
 }
 
 
@@ -157,39 +178,61 @@ input {
 }
 
 
-input:nth-of-type(1):checked ~ label:nth-of-type(1), 
-input:nth-of-type(2):checked ~ label:nth-of-type(2),
-input:nth-of-type(3):checked ~ label:nth-of-type(3){
+#wrapper_nouvelle_1,#label_nouvelle_1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+#wrapper_nouvelle_2,#label_nouvelle_2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+#wrapper_nouvelle_3,#label_nouvelle_3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+
+#nouvelle_1:checked ~ #label_nouvelle_1, 
+#nouvelle_2:checked ~ #label_nouvelle_2,
+#nouvelle_3:checked ~ #label_nouvelle_3{
     
    z-index: 0;
 }
 
 
-input:nth-of-type(1):checked ~ label {
+/*bouge tout les labels suivant input1 de 0 quand le bouton input 3 est checked*/
+#nouvelle_1:checked ~ label,
+#nouvelle_1:checked ~ label + article{
     /*mouvement lorsqu'on appui sur un bouton*/
-	transform: translate3d(0, 0, 0);
+     /* transform: translate3d(0, 0, 0); */
+	transform: translateX(calc(calc(-100% * 0) + calc(var(--offset_page_nouvelle)*0)));
 }
 
-input:nth-of-type(2):checked ~ label {
-  
-	transform: translate3d(-103%, 0, 0);
+/*bouge tout les labels suivant input2 de -103% quand le bouton input 3 est checked*/
+#nouvelle_2:checked ~ label,
+#nouvelle_2:checked ~ label + article{
+	/* transform: translate3d(-105%, 0, 0); */
+    transform: translateX(calc(calc(-100% * 1) + calc(var(--offset_page_nouvelle)*1)));
 }
 
-input:nth-of-type(3):checked ~ label {
-    
-	transform: translate3d(-206%, 0, 0);
+/*bouge tout les labels suivant input3 de -203% quand le bouton input 3 est checked*/
+#nouvelle_3:checked ~ label,
+#nouvelle_3:checked ~ label + article{
+    /* transform: translate3d(-210%, 0, 0); */
+	transform: translateX(calc(calc(-100% * 2) + calc(var(--offset_page_nouvelle)*2)));
 }
 
 
 label {
 
-    width: 97%;
+    width: var(--const-largeur_nouvelle);
     /*la grosseur du bouton s'ajuste avec la grosseur de l'écran*/
     height: 50vh;
-
-    /*visuel*/
-    border-color: #444 solid;
-    border-radius: 25px;
 	
 	position: relative;
 	z-index: 1;
@@ -201,23 +244,24 @@ label {
     justify-self: center;
 }
 
-.nouvelles_wrapper label:before,
-.nouvelles_wrapper label:after {
+
+.page_des_nouvelles label:before,
+.page_des_nouvelles label:after {
 
      /*couleur de la fleche*/
     background-color:#444444af;
 	color: #fff;
     /*dimension de la fleche*/
-	padding: 1rem;
-    width: 1.5rem;
+	padding: 2rem;
+    width: 2rem;
     height: 100px;
-	font-size: 2rem;
-    line-height: 4rem;
+	font-size: 4rem;
+    line-height: 2rem;
 
     /*place en haut des nouvelles*/
     /*positionnement de la fleche*/
 	position: absolute;
-    top: 9%;
+    top: 50px;
     
 
 
@@ -230,20 +274,20 @@ label {
 }
 
 
-.nouvelles_wrapper label:before {
+.page_des_nouvelles label:before {
     /*fleche droite déplace vers le prochain article*/
 	content: "\276D";
-	right: 103%;
+	right: 105%;
     /*courbe les coins voulus*/
 	border-top-left-radius: 50%;
 	border-bottom-left-radius: 50%;
 
 }
 
-.nouvelles_wrapper label:after {
+.page_des_nouvelles label:after {
     /*fleche gauche déplace vers l'article précédent*/
 	content: "\276C";
-	left: 103%;
+	left: 105%;
     /*courbe les coins voulus*/
 	border-top-right-radius: 50%;
 	border-bottom-right-radius: 50%;
