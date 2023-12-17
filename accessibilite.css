@@ -81,11 +81,14 @@
         font-size: 1.2rem;
     }
 
-    .nouvelles_wrapper label:before,
-    .nouvelles_wrapper label:after {
+    .page_des_nouvelles label:before,
+    .page_des_nouvelles label:after {
         /*nouveau format de fleche*/
-        height: 60px;
-        line-height: 2rem;
+        padding: 1rem;
+        width: 1rem;
+        height: 50px;
+        font-size: 2rem;
+        line-height: 1rem;
     }
 
     /*contact*/
