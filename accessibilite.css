@@ -5,7 +5,7 @@
 @media screen and  (max-width:768px) {
 
     body{
-        /* border: red dotted 8px; */
+        border: red dotted 8px;
         font-size: 1rem;
     }
 
@@ -53,6 +53,7 @@
     .section_actualite label{
         height: 100%;
     }
+
     .section_actualite h2 {
         padding-top: 10px;
         padding-bottom: 10px;
@@ -145,7 +146,7 @@
 
 
     body{
-        /* border: rgb(255, 187, 0) dotted 8px; */
+        border: rgb(255, 187, 0) dotted 8px;
         font-size: 1rem;
     }
 
@@ -171,20 +172,29 @@
     }
 
     /*Explication*/
-    .nouvelle{
-        grid-template-columns: 5% 250px auto 5%;
-        grid-template-rows: min-content auto 5%;
-    }
+    /* .nouvelle{
+        height: 100%;
+        grid-template-columns: 5% minmax(150px, 250px) 1fr 5%;
+        grid-template-rows: min-content minmax(300px, 600px) 5%;
+
+    } */
 
     .nouvelle h3{
+
+        font-size: 2rem;
+    }
+
+    .nouvelle p{
+
         font-size: 1.4rem;
     }
 
     .nouvelles_wrapper label:before,
     .nouvelles_wrapper label:after {
-        line-height: 15rem;
+        line-height: 4rem;
         width: 1.5rem;
         font-size: 2rem;
+        height: 100px;
     }
 
     /*Contacts*/
@@ -220,7 +230,7 @@
 /*Ordinateur*/
 @media screen and (min-width: 1200px){
     body{
-        /* border: rgb(0, 255, 13) solid 8px ; */
+        border: rgb(0, 255, 13) solid 8px ;
         font-size: 2rem;
     }
 
