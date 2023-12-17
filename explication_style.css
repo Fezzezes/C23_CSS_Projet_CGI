@@ -30,7 +30,7 @@
     box-shadow: none;
 }
 
-article {
+.nouvelles_wrapper {
 
     /*une colonne par nouvelle*/
     display: grid;
@@ -157,26 +157,54 @@ input {
 }
 
 
-input:nth-of-type(1):checked ~ label:nth-of-type(1), 
-input:nth-of-type(2):checked ~ label:nth-of-type(2),
-input:nth-of-type(3):checked ~ label:nth-of-type(3){
+#nouvelle_1,#label_nouvelle_1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+#nouvelle_2,#label_nouvelle_2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+#nouvelle_3,#label_nouvelle_3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+
+#nouvelle_1:checked:checked ~ #label_nouvelle_1, 
+#nouvelle_2:checked:checked ~ #label_nouvelle_2,
+#nouvelle_3:checked:checked ~ #label_nouvelle_3{
     
    z-index: 0;
 }
 
 
-input:nth-of-type(1):checked ~ label {
+/*bouge tout les labels suivant input1 de 0 quand le bouton input 3 est checked*/
+#nouvelle_1:checked ~ label,
+#nouvelle_1:checked ~ label + a{
     /*mouvement lorsqu'on appui sur un bouton*/
+    border: red solid 2px;
 	transform: translate3d(0, 0, 0);
 }
 
-input:nth-of-type(2):checked ~ label {
+/*bouge tout les labels suivant input2 de -103% quand le bouton input 3 est checked*/
+#nouvelle_2:checked ~ label,
+#nouvelle_2:checked ~ label + a{
   
+    border: rgb(0, 17, 255) solid 2px;
 	transform: translate3d(-103%, 0, 0);
 }
 
-input:nth-of-type(3):checked ~ label {
+/*bouge tout les labels suivant input3 de -203% quand le bouton input 3 est checked*/
+#nouvelle_3:checked ~ label,
+#nouvelle_3:checked ~ label + a {
     
+    border: rgb(0, 255, 42) solid 2px;
 	transform: translate3d(-206%, 0, 0);
 }
 
