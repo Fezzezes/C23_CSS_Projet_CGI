@@ -1,5 +1,10 @@
 
-
+:root{
+    /*les nouvelle_wrappers et noulle_labels doivent etre freres mais avoir la meme largeur toujours*/
+    --const-largeur_nouvelle: 95%;
+    /*chaque translateX d'un wrapper de nouvelle doit avoir +5% d"offset*/
+    --offset_page_nouvelle:-5%;
+}
 
 .section_milieu_impactes{
     /*donne du padding entre cette section et la section des actualité*/
@@ -43,9 +48,11 @@
 }
 
 .wrapper_nouvelle{
-    transition: transform 400ms ease-out;
-    width: 95%;
+    /*centre les nouvelles avec la meme largeur de le label*/
+    width: var(--const-largeur_nouvelle);
     justify-self: center;
+    /*transition lorsqu'on change de nouvelle*/
+    transition: transform 400ms ease-out;
 }
 
 
@@ -140,8 +147,7 @@
 
     /*permet de scroll si le texte est trop long*/
     overflow:auto;
-    text-wrap: wrap;
-
+ 
     /*visuel*/
     border-radius: 25px;
     background-color: #44444494;
@@ -200,36 +206,30 @@ input {
 #nouvelle_1:checked ~ label,
 #nouvelle_1:checked ~ label + article{
     /*mouvement lorsqu'on appui sur un bouton*/
-    border: red solid 2px;
-	transform: translate3d(0, 0, 0);
+     /* transform: translate3d(0, 0, 0); */
+	transform: translateX(calc(calc(-100% * 0) + calc(var(--offset_page_nouvelle)*0)));
 }
 
 /*bouge tout les labels suivant input2 de -103% quand le bouton input 3 est checked*/
 #nouvelle_2:checked ~ label,
 #nouvelle_2:checked ~ label + article{
-  
-    border: rgb(0, 17, 255) solid 2px;
-	transform: translate3d(-105%, 0, 0);
+	/* transform: translate3d(-105%, 0, 0); */
+    transform: translateX(calc(calc(-100% * 1) + calc(var(--offset_page_nouvelle)*1)));
 }
 
 /*bouge tout les labels suivant input3 de -203% quand le bouton input 3 est checked*/
 #nouvelle_3:checked ~ label,
 #nouvelle_3:checked ~ label + article{
-    
-    border: rgb(0, 255, 42) solid 2px;
-	transform: translate3d(-210%, 0, 0);
+    /* transform: translate3d(-210%, 0, 0); */
+	transform: translateX(calc(calc(-100% * 2) + calc(var(--offset_page_nouvelle)*2)));
 }
 
 
 label {
 
-    width: 95%;
+    width: var(--const-largeur_nouvelle);
     /*la grosseur du bouton s'ajuste avec la grosseur de l'écran*/
     height: 50vh;
-
-    /*visuel*/
-    border-color: #444 solid;
-    border-radius: 25px;
 	
 	position: relative;
 	z-index: 1;
@@ -258,7 +258,7 @@ label {
     /*place en haut des nouvelles*/
     /*positionnement de la fleche*/
 	position: absolute;
-    top: 12%;
+    top: 50px;
     
 
 
