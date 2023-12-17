@@ -12,6 +12,15 @@
     padding-bottom: 100px;
 }
 
+.presentation_section h2{
+    margin: 0;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
 .presentation_section article{
 
     /*chaque article du la section presentation*/
@@ -22,7 +31,7 @@
     display: grid;
    
     /*unne colonne*/
-    grid-template-columns: 100%;
+    grid-template-columns: 10% auto 10%;
     /*premiere ligne aura label et l'input*/
     /*deuxieme ligne aura le contenu*/
     grid-template-rows: 65px auto;
@@ -31,33 +40,27 @@
 label, input{
     /*premiere ligne, toute la colonne*/
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 4;
     grid-row-start: 1 ;
     grid-row-end: 2;
 }
 
-label{
+.presentation_section h2, label{
 
-    /*background*/
-    background-image: url(./Textures/prism.png);
-    
-    /*le label sera elle-même une grille*/
-    display: grid;
-    /*premiere colonne aura le titre, suivi de l'image miniature, suivi d'un gap de 10%*/
-    grid-template-columns: auto 50px 10%;
-   
-    /*place le label par-dessus le boxshadow de .presentation_contenu*/
+    /*place l'élément par-dessus le boxshadow de .presentation_contenu*/
     z-index: 10;
 
+    /*visuel*/
     /*donne un box-shadow au label*/
+    background-image: url(./Textures/prism.png);
     border-top: rgba(128, 128, 128, 0.13) solid 4px;
-    box-shadow: 0px 5px 10px 2px;
+    box-shadow: 0px 5px 10px 2px black;
 }
 
 
-
 input{
-
+    /*margin 0*/
+    margin: 0;
     /*fait apparaite le curseur par-dessus la barre de déroulement*/
     cursor:pointer;
     /*cache le checkbox*/
@@ -68,27 +71,50 @@ input{
 
     /*prend la largeur et hauteur du container*/
     width: 100%;
-    height: 100%;
+    height: 100%; 
 } 
 
-label h3{
+.titre_deroulant{
 
-    /*premiere ligne, premiere colonne*/
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
+    /*premiere ligne centre de la colonne*/
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1 ;
     grid-row-end: 2;
 
+    /*prend la largeur du container*/
+    width: 100%;
+    /*palce les elements en row, avec le plus d'espace possible entre eux*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    z-index: 10;
+
+    /*aligne au centre les enfants*/
+    align-items: center;
+}
+
+.titre_deroulant img{
+    /*place l'image miniature du label dans la 2e colonne, premiere ligne */
+    /*toujours 50px de largeur*/
+    width: 50px;
+    height:auto;
+}
+
+.titre_deroulant h3{
+
+    /*largeur suit le titre*/
     /*donne une margin à gauche de 10px*/
     margin-left: 10px;
+    width: fit-content;
 
     /*texte blanc avec text-shadow*/
     color: whitesmoke;
     text-shadow: 3px 3px black;
 }
 
-
-label h3:after {
+h3:after {
 
     /*ajoute une fleche à droite du titre*/
     width: 100px;
@@ -96,22 +122,22 @@ label h3:after {
     color: gray;
 }
 
-label > img{
-    /*place l'image miniature du label dans la 2e colonne, premiere ligne */
-    grid-column-start: 2 ;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+img{
 
-    /*toujours 50px de largeur*/
-    width: 50px;
+    /*visuel des images*/
+    /*donne une ombre et donne une bordure avec les coins de l'image*/
+    border:gray solid 4px;
+    border-radius: 20px;
+    box-shadow: black 10px 10px 25px;
 }
+
+
 
 .presentation_contenu {
 
     /*toute la colonne, 2e ligne*/
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
 
@@ -139,10 +165,8 @@ label > img{
     /*prend la largeur du container*/
     width: 100%;
     
-    /*donne une ombre et donne une bordure avec les coins de l'image*/
-    border:gray solid 4px;
-    border-radius: 25px;
-    box-shadow: black 10px 10px 25px;
+   
+
 }
 
 .presentation_contenu p{
@@ -177,6 +201,11 @@ label > img{
 
 article:last-child::after{
 
+    /*prend la largeur de la derneire ligne*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+
     /*ajoute une bordure apres le derniere article*/
     content: '';
 
@@ -188,18 +217,19 @@ article:last-child::after{
     background-image: url(./Textures/prism.png);
     border-top: rgba(128, 128, 128, 0.13) solid 4px;
     box-shadow: 0px 5px 10px 2px; 
-
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     /*ce place par-dessus le shadow du derniere article*/
     z-index: 10;
 }
 
-input:not(:checked) + label +.presentation_contenu{
-    
+input:not(:checked) + label+.titre_deroulant +.presentation_contenu{
     /*cache la présentation des centrales non cochées*/
     display: none;
 }
 
-input:checked + label h3:after {
+input:checked + label + .titre_deroulant h3:after {
+
     /*change la fleche si le contenu est visible*/
 	content: "  \1405";
     color: rgb(68, 68, 68);
