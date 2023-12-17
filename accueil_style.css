@@ -188,6 +188,9 @@ article:last-child::after{
     background-image: url(./Textures/prism.png);
     border-top: rgba(128, 128, 128, 0.13) solid 4px;
     box-shadow: 0px 5px 10px 2px; 
+
+    /*ce place par-dessus le shadow du derniere article*/
+    z-index: 10;
 }
 
 input:not(:checked) + label +.presentation_contenu{

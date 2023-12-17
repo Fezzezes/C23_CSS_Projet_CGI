@@ -4,31 +4,18 @@
 /*Téléphone mobile*/
 @media screen and  (max-width:768px) {
 
-    body{
-        border: red dotted 8px;
-        font-size: 1rem;
-    }
+    /* body{border: red dotted 8px; } */
 
-    h1{
-        font-size: 5.6rem;
-    }
+    /*font-size par défaut pour les téléphones mobiles*/
+    body{font-size: 1rem; }
+    h1{font-size: 5.6rem;}
+    h2{font-size: 2rem; line-height: 1;}
+    h3{font-size: 1.5rem;}
 
-    h2{
-        font-size: 2rem;
-        line-height: 1;
-    }
-
-    h3{
-        font-size: 1.5rem;
-    }
-
-    .banniere_images{
-        height: 150px;
-
-    }
+    /*rend la banniere plus petite*/
+    .banniere_images{height: 150px;}
 
     /*accueil*/
-
     .a_propos,
     .presentation_contenu{
         /*place le texte + l'élément box shadow*/
@@ -37,99 +24,79 @@
     }
 
     .presentation_contenu img{
+        /*retire l'image pour avoir plus de place pour le texte*/
         margin: 0;
         padding: 0;
         display: none;
     }
     
-    .presentation_contenu p{
-        width: 100%;
-    }
+    /*page explication*/
 
-    .section_actualite{
-        height: 100%;   
-    }
-
-    .section_actualite label{
-        height: 100%;
-    }
+    .section_actualite label{height: 100%;}
 
     .section_actualite h2 {
+        /*centre le titre d'actualité*/
         padding-top: 10px;
         padding-bottom: 10px;
         text-align: center;
-        /* height: 1000px; */
-    }
-
-    .nouvelles_wrapper{
-        /* height: 1000px; */
-        height: 100%;
     }
 
     .nouvelle{
-
-        height: auto;
-        /* display: flex;
-        flex-direction: column;
-        flex-wrap: wrap; */
-        grid-template-columns: max-content;
+        /*nouveau format de grille sans l'image*/
         grid-template-columns: 100%;
-        grid-template-rows: minmax(70px, min-content) auto;
-
-        
+        grid-template-rows: minmax(70px, min-content) auto;    
     }
 
     .nouvelle h3{
-        font-size: 1rem;
+        /*position du titre de nouvelle*/
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        /*nouveau format de texte*/
+        font-size: 1.4rem;
         line-height: 1.3;
         padding: 10px;
         padding-left: 40px;
         padding-right: 40px;
-
-        grid-column-start: 1;
-        grid-column-end: 2;
-        /* height: fit-content; */
     }
-    /*explication*/
+
+    
     .nouvelle img{
-        /*cache l'image si l'écran est trop petit*/
         content-visibility: hidden;
     }
 
     .nouvelle:hover img{
+        /*enlene le highlight de l'image avec hover*/
         background-color: transparent;
         border: none
     }
 
     .nouvelle p{
+        /*position du texte*/
         /*donne l'espace anciennement occupé par l'image au texte*/
-        grid-column-start: 2;
-        font-size: 0.8rem;
-
         grid-column-start: 1;
         grid-column-end: 2;
-    }
 
+        /*nouveau font-size*/
+        font-size: 1.2rem;
+    }
 
     .nouvelles_wrapper label:before,
     .nouvelles_wrapper label:after {
-        width: 0.2rem;
-        font-size: 1.9rem;
-
-        top: 9%;
+        /*nouveau format de fleche*/
         height: 60px;
         line-height: 2rem;
-        
     }
-
 
     /*contact*/
     .main_contact{
+        /*place les éléments en colonne au lieu d'en ligne*/
         display: flex;
         flex-direction: column;
     }
 
     .section_contact{
+        /*place les éléments en colonne au lieu d'en ligne*/
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -138,100 +105,46 @@
     }
 
     .section_contact article p{
-        font-size: 0.8;
+        font-size: 0.8rem;
     }
 }
+
 /*Tablette*/
 @media screen and (min-width: 768px)and (max-width:1200px){
 
-
-    body{
-        border: rgb(255, 187, 0) dotted 8px;
-        font-size: 1rem;
-    }
-
-    h1{
-        /* font-size: 3rem; */
-    }
-
-    h2{
-        font-size: 2rem;
-        
-    }
-
-    h3{
-        font-size: 1.5rem;
-    }
+    /*font-size par défaut pour les tabletes*/
+    body{ font-size: 1rem;}
+    h2{ font-size: 2rem;}
+    h3{font-size: 1.5rem;}
 
     
     /*Accueuil*/
     .presentation_contenu{
+        /*nouvelle grille avec une image plus petite*/
         display: grid;
         grid-template-columns: auto 200px;
         grid-template-rows: 200px;
     }
 
     /*Explication*/
-    /* .nouvelle{
-        height: 100%;
-        grid-template-columns: 5% minmax(150px, 250px) 1fr 5%;
-        grid-template-rows: min-content minmax(300px, 600px) 5%;
-
-    } */
-
-    .nouvelle h3{
-
-        font-size: 2rem;
-    }
-
-    .nouvelle p{
-
-        font-size: 1.4rem;
-    }
-
-    .nouvelles_wrapper label:before,
-    .nouvelles_wrapper label:after {
-        line-height: 4rem;
-        width: 1.5rem;
-        font-size: 2rem;
-        height: 100px;
-    }
-
+    .nouvelle h3{font-size: 2rem;}
+    .nouvelle p{ font-size: 1.4rem;}
+    
     /*Contacts*/
     .section_contact{
-       
+       /*place les contacts dans une grille de 2x2 avec des dimensions égales*/
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        
     }
 
-    .section_contact article:nth-child(3) {
-    
-        width: 100%;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    .section_contact article:nth-child(4) {
-        
-        width: 100%;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .section_contact article p{
-        font-size: 1.2em;
-    }
+    .section_contact article p{font-size: 1.2em;}
 }
 
 /*Ordinateur*/
 @media screen and (min-width: 1200px){
-    body{
-        border: rgb(0, 255, 13) solid 8px ;
-        font-size: 2rem;
-    }
 
+    /*font par défaut*/
+    body{font-size: 2rem;}
+
+    /*par défaut les styles sont déjà concu pour un ordianteur*/
 }

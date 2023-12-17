@@ -133,6 +133,7 @@ article {
 
     /*visuel*/
     border-radius: 25px;
+    background-color: #44444494;
 }
 
 
@@ -206,9 +207,9 @@ label {
 	color: #fff;
     /*dimension de la fleche*/
 	padding: 1rem;
-    width: 0.2rem;
+    width: 1.5rem;
     height: 100px;
-	font-size: 1.9rem;
+	font-size: 2rem;
     line-height: 4rem;
 
     /*place en haut des nouvelles*/
