@@ -1,72 +1,43 @@
 
-
-
-h2{
-
-    color: rgb(245, 255, 105);
-}
-
 main{
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; */
 
+    /*padding*/
     padding: 25px;
-    padding-top: 50px;
-    /* justify-content: center;
-    align-items: center;
 
-    display: grid;
-    grid-template-columns: 40% 60%; */
-
+    /*les elements de cette pages seront placé en row*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    border-radius: 0px 0px 25px 25px;
 }
 
-
-
-
-
+.section_contact article,
 .section_formulaire{
-    width: 100%;
-    background-image: url("./Textures/triangular.png");
-    padding: 15px;
-    
+
+    /*visuel*/
     border-radius: 25px;
-    border: #444 solid 2px;
+    border: #444 solid 4px;
     border-right: transparent;
     border-top: transparent;
-
-    box-shadow: 0px 2px 20px 0px black;
+    box-shadow: 0px 2px 20px 10px black;
 }
+
+.section_formulaire{
+    /*prend la largeur du main avec 15px de padding*/
+    width: 100%;
+    padding: 15px;
+
+    /*visuel*/
+    background-image: url("./Textures/triangular.png");
+}
+
 
 .section_formulaire form{
 
-    
-    width: 100%;
-    height: 70%;
-
-
-
+    /*place les éléments du formulaire dans une grille*/
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: minmax(40px, 10%) minmax(40px, 10%);
     gap: 10px;
-
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; */
-
-    margin: 0;
-    padding: 0;
-
-   
-
-    
 }
 
 
@@ -76,21 +47,25 @@ main{
 .formulaire_commentaire,
 .envoyer{
 
+    /*fond blanc*/
     background-color:aliceblue;
     
+    /*prend la grosseur du container*/
     width: 100%;
-
-    margin: 0;
-    padding: 10px;
     height: 100%;
+
+    /*padding*/
+    padding: 10px;
+
+    /*la hauteur minimal*/
     min-height: 40px;
 
+    /*pas de bordure, coupe les coins*/
     border: transparent;
     border-radius: 10px;
 }
 
 .formulaire_nom{
-
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -120,7 +95,6 @@ main{
 }
 
 .envoyer{
-    
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 4;
@@ -128,82 +102,74 @@ main{
 }
 
 .envoyer:hover{
+    /*highlight le bouton envoyer quand on hover*/
     cursor: pointer;
     border: #444444a1 solid;
 }
 
 .section_contact{
 
+    /*prend la largeur au complet*/
     width: 100%;
 
+    /*place les éléments dans 4 fractions égalent d'une grille*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    /* margin: 25px; */
     gap: 15px; 
     padding: 25px;
 }
 
 .section_contact h3{
+    /*pas de marge*/
+    /*trace un ligne sous le titre*/
     margin-left: 0;
     border-bottom: #444 solid;
 }
 
 .section_contact article{
     
+    /*prend la largeur au complet*/
     width: 100%;
-
-    grid-row-start: 1;
-
+   
+    /*place le contenu en flex colonne avec un wrap*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
+    /*visuel*/
     color: aliceblue;
     background-image: url("./Textures/triangular_teal.png");
-
     padding: 10px;
-
-
-    border: #444 solid;
+    border: #444 solid 4px;
     border-right: transparent;
     border-top: transparent;
-
-    box-shadow: 0px 2px 20px 0px black;
-
+    box-shadow: 0px 2px 20px 2px black;
     border-radius: 10px;
-    
 }
 
 .section_contact article p{
     
+    /*visuel*/
     width: 100%;
     margin: 0;
     padding: 0;
-    
     font-size: 0.6em;
-    white-space: normal;
 }
 
 .contact article:first-child {
-    
     grid-column-start: 1;
     grid-column-end: 2;
 }
-
 .contact article:nth-child(2) {
-    
     grid-column-start: 2;
     grid-column-end: 3;
 }
-
 .contact article:nth-child(3) {
-
     grid-column-start: 3;
     grid-column-end: 4;
 }
 .contact article:nth-child(4) {
-
     grid-column-start: 4;
     grid-column-end: 5;
 }

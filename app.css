@@ -253,7 +253,7 @@ footer{
     /*background nécéssaire pour l'effet de coin inversé*/
     background-image: url(./Textures/prism.png);
     /*fait la largeur de l'écran*/
-    width: 100vw;
+    width: 100%;
 }
 
 footer ul{
