@@ -1,163 +1,151 @@
 
 
 
-
-
-article {
-    /*empeche les nouvelles de wrapper en colonne*/
-	white-space: nowrap;
-    
-    display: grid;
-    /*une colonne par nouvelle*/
-    grid-template-columns: 100% 100% 100%;
-   
-    /*cache les nouvelles à l'extérieur de l'écran*/
-    overflow: hidden;
-}
-
-
-label {
-	color: #fff;
-
-    width: 97%;
-    height: 50vh;
-
-    border-color: #444 solid;
-    border-radius: 25px;
-	
-	position: relative;
-	z-index: 1;
-
-    transition: transform 400ms ease-out;
-    justify-self: center;
-}
-
 .section_milieu_impactes{
+    /*donne du padding entre cette section et la section des actualité*/
     padding-bottom: 50px;
 }
 
 .section_actualite{
-    background-color: #444;
+
+    /*Donne du padding entre la section actualité et le footer*/
     padding-bottom: 25px;
 
+    /*Background pour la section actualité*/
     background-image: url("./Textures/prism.png");
     border-radius: 15px 15px 15px 15px;
     border-top: rgba(128, 128, 128, 0.13) solid 4px;
     box-shadow: 0px 5px 80px 10px black;
-    z-index: 10;
     margin: 15px;
     
-    height: 100%;
+    /*place l'ombre par-dessus l'élément ::before du footer*/
+    z-index: 10;
 }
 
 .section_actualite h2 {
+
+    /*la section actualité n'a pas un h2 comme les autres sections*/
     background: none;
     border: none;
     box-shadow: none;
+}
 
+article {
+
+    /*une colonne par nouvelle*/
+    display: grid;
+    grid-template-columns: 100% 100% 100%;
+   
+    /*cache les nouvelles à l'extérieur de l'écran*/
+    overflow: hidden;
+
+    height: 100%;
 }
 
 .nouvelle{
 
- 
-    grid-row-start: 2;
-    grid-row-end: 3;
 
+    /*prend 100% de la largeur*/
     width: 100%;
+    /*minimum et maximum de hauteur pour prévenir des comportement étrange avec height fit-content*/
     min-height: 80%;
     max-height: 100%;
+    /*Modifie la hauteur de la nouvelle selon son contenu*/
     height: fit-content;
 
-    margin: 0;
+    /*gap de colonne*/
     column-gap: 10px;
 
+    /*place les élements de la nouvelle dans un grille*/
     display: grid;
+    /*le titre sera sur la premiere ligne*/
+    /*l'image sera dans la premiere partie de la 2e ligne avec une largeur de 200px max*/
+    /*le texte sera dans la 2e partie de la 2e ligne*/
+    /*des 5% de padding de chaque coté pour nos fleches*/
     grid-template-columns: 5% 200px auto 5%;
+    /*la premiere ligne ajuste ça hauteur avec la grosseur du titre*/
+    /*la 2e ligne prend l'espace restant en laissant 5% de padding à la fin*/
     grid-template-rows: min-content auto 5%;
     
-
-
-
+    /*visuel d'une nouvelle*/
     background-image: url(./Textures/triangular.png);
     border: rgba(128, 128, 128, 0.582) solid 5px;
- 
     border-top: none;
     border-right: none;
     border-radius: 25px;
-
 }
 
 .nouvelle h3{
-    margin: 0;
-    padding-top: 1%;
-    padding-bottom: 1%;
+
+    /*place le titre sur la premiere ligne entre les 5% de padding*/
     grid-column-start: 2;
     grid-column-end: 4;
-
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 2; 
 
+    /*retire la marge*/
+    margin: 0;
+    /*ajoute du padding en-haut et en-bas du titre*/
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    /*renvoie le titre sur la prochaine ligne, si le titre est trop long*/
     white-space: normal;
 
-    /* overflow: hidden; */
+    /*visuel du titre*/
     color:white;
     text-shadow: 2px 2px black;
     font-style: italic;
-
-    /* background-image: url("./Textures/prism.png");
-    border-radius: 20px 20px 0px 0px;
-    border-top: rgba(128, 128, 128, 0.13) solid 4px;
-    box-shadow: 0px 5px 10px 2px black; */
 }
 
 .nouvelle  img {
 
-    width: 100%;
-    height: auto;
-
-
-    border-radius: 25px;
-
+    /*l'image sera sur la 2e ligne, premiere partie après les 5% de buffer*/
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 3; 
+    grid-row-end: 3;
+
+    /*l'image aura la largeur de son container, la hauteur s'ajustera pour préservé les dimensions*/
+    width: 100%;
+    height: auto;
+
+    /*coupe les coins ronds*/
+    border-radius: 25px;
 }
 
-
-
-
-
-
-
 .nouvelle p{
-
-    background-color: #444444b4;
-    border-radius: 25px;
     
+    /*le texte sera sur la 2e ligne et 3e colonne*/
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /*prend le plus d'espace possible dans son container, avec du padding*/
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 15px;
 
+    /*permet de scroll si le texte est trop long*/
     overflow:auto;
     text-wrap: wrap;
 
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    /*visuel*/
+    border-radius: 25px;
 }
+
 
 .nouvelle:hover,
 .nouvelle:hover img{
+
+    /*comme les nouvelles sont des liens, ajoute un effet d'highlight quand on hover*/
     background-color: transparent;
     border: #00BF9A 5px solid;
     color: #00BF9A;
     text-shadow: 1px 1px rgb(18, 217, 231);
     border-radius: 15px;
 }
-
 
 input {
     /*cache les boutons radio*/
@@ -168,14 +156,14 @@ input {
 
 input:nth-of-type(1):checked ~ label:nth-of-type(1), 
 input:nth-of-type(2):checked ~ label:nth-of-type(2),
-input:nth-of-type(3):checked ~ label:nth-of-type(3)
-{
+input:nth-of-type(3):checked ~ label:nth-of-type(3){
+    
    z-index: 0;
 }
 
 
 input:nth-of-type(1):checked ~ label {
-    
+    /*mouvement lorsqu'on appui sur un bouton*/
 	transform: translate3d(0, 0, 0);
 }
 
@@ -190,95 +178,71 @@ input:nth-of-type(3):checked ~ label {
 }
 
 
+label {
 
+    width: 97%;
+    /*la grosseur du bouton s'ajuste avec la grosseur de l'écran*/
+    height: 50vh;
 
-label:before,
-label:after {
-
-    background-color:#444444af;
-
-	position: absolute;
-	padding: 1rem;
-	font-size: 3rem;
-
-   
+    /*visuel*/
+    border-color: #444 solid;
+    border-radius: 25px;
 	
-	line-height: 15rem;
-    /*place au centre*/
-	top: 50%;
-	transform: translate3d(0, -50%, 0);
-	cursor: pointer;
-    z-index: 150;
-}
+	position: relative;
+	z-index: 1;
 
+    /*transition du mouvement lorsquon change de nouvelles*/
+    transition: transform 400ms ease-out;
 
-label:before {
-    /*fleche droite déplace vers le prochain article*/
-	content: "\276D";
-	right: 103%;
-	border-top-left-radius: 50%;
-	border-bottom-left-radius: 50%;
-}
-
-label:after {
-    /*fleche gauche déplace vers l'article précédent*/
-	content: "\276C";
-	left: 103%;
-	border-top-right-radius: 50%;
-	border-bottom-right-radius: 50%;
-    z-index: 300;
-}
-
-
-.nouvelles_wrapper{
-    height: 100%;
-}
-
-/* .nouvelle{
-    height: 100%;
-    grid-template-columns: 5% minmax(350px, 350px) 1fr 5%;
-    grid-template-rows: min-content minmax(300px, 600px) 5%;
-} */
-
-.nouvelle h3{
-
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2; 
-
-}
-
-.nouvelle  img {
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    
-
-    width: 100%; 
-}
-
-
-.nouvelle p{
-
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    height: 100%;
+    /*centre les nouvelles*/
+    justify-self: center;
 }
 
 .nouvelles_wrapper label:before,
 .nouvelles_wrapper label:after {
-    width: 0.2rem;
-    font-size: 1.9rem;
 
-    top: 9%;
+     /*couleur de la fleche*/
+    background-color:#444444af;
+	color: #fff;
+    /*dimension de la fleche*/
+	padding: 1rem;
+    width: 0.2rem;
     height: 100px;
+	font-size: 1.9rem;
     line-height: 4rem;
+
+    /*place en haut des nouvelles*/
+    /*positionnement de la fleche*/
+	position: absolute;
+    top: 9%;
+
+
+	transform: translate3d(0, -50%, 0);
+    /*ajotue un curseur lorsqu'on place la souris sur la fleche*/
+	cursor: pointer;
+
+    /*s'assure de placer les fleches par-dessus les nouvelles*/
+    z-index: 50;
+}
+
+
+.nouvelles_wrapper label:before {
+    /*fleche droite déplace vers le prochain article*/
+	content: "\276D";
+	right: 103%;
+    /*courbe les coins voulus*/
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+
+}
+
+.nouvelles_wrapper label:after {
+    /*fleche gauche déplace vers l'article précédent*/
+	content: "\276C";
+	left: 103%;
+    /*courbe les coins voulus*/
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
 }
 
 
