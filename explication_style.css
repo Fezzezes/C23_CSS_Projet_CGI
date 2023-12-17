@@ -74,6 +74,8 @@
     border-right: none;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+
+    transition: transform 400ms ease-out;
 }
 
 .nouvelle h3{
@@ -135,6 +137,8 @@
     /*visuel*/
     border-radius: 25px;
     background-color: #44444494;
+
+    
 }
 
 
@@ -197,7 +201,7 @@ input {
 #nouvelle_2:checked ~ label + a{
   
     border: rgb(0, 17, 255) solid 2px;
-	transform: translate3d(-103%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
 }
 
 /*bouge tout les labels suivant input3 de -203% quand le bouton input 3 est checked*/
@@ -205,13 +209,13 @@ input {
 #nouvelle_3:checked ~ label + a {
     
     border: rgb(0, 255, 42) solid 2px;
-	transform: translate3d(-206%, 0, 0);
+	transform: translate3d(-200%, 0, 0);
 }
 
 
 label {
 
-    width: 97%;
+    width: 100%;
     /*la grosseur du bouton s'ajuste avec la grosseur de l'écran*/
     height: 50vh;
 
