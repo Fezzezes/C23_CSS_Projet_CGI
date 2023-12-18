@@ -166,7 +166,7 @@
     background-color: transparent;
     border: #00BF9A 5px solid;
     color: #00BF9A;
-    text-shadow: 1px 1px rgb(18, 217, 231);
+    /* text-shadow: 1px 1px rgb(18, 217, 231); */
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
 }
